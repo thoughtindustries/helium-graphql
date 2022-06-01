@@ -1,0 +1,25 @@
+{
+  "OBJECT": {
+    "Query": {
+      "fields": {
+        "HeliumBatch": {
+          "documentation": {"undocumented": true}
+        },
+        "HeliumDeploymentStatus": {
+          "documentation": {"undocumented": true}
+        },
+        "HeliumLaunchData": {
+          "documentation": {"undocumented": true}
+        }
+      }
+    }
+  },
+  "SCALAR": {
+    "labels": {
+      "documentation": {"example": "difficulty"}
+    },
+    "values": {
+      "documentation": {"example": "hard"}
+    }
+  }
+}

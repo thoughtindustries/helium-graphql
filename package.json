@@ -1,0 +1,21 @@
+{
+  "name": "helium-graphql-docs",
+  "version": "1.0.0",
+  "description": "Helium GraphQL Documentation",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate-schema": "graphql-codegen --config codegen.yml",
+    "dev": "npx spectaql config.yml -D",
+    "generate-docs": "npx spectaql config.yml"
+  },
+  "author": "",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "spectaql": "^1.2.1"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^2.6.2",
+    "@graphql-codegen/introspection": "^2.1.1"
+  }
+}

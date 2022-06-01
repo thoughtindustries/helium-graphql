@@ -1,0 +1,20 @@
+spectaql:
+  themeDir: "spectaql"
+
+info:
+  title: Helium GraphQL API Reference
+  description: Documentation related to available types, queries, mutations, etc. in Helium
+  termsOfService: https://www.thoughtindustries.com
+  contact:
+    name: Support
+    url: http://www.thoughtindustries.com/support
+    email: support@thoughtindustries.com
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  x-url: https://home.thoughtindustries.com/helium
+
+introspection:
+  introspectionFile: ./graphql.schema.json
+  metadataFile: ./metadata.json
+
