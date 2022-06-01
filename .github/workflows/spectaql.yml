@@ -14,7 +14,7 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Install and Build Storybook
+      - name: Install and Build Spectaql
         run: |
           npm ci
           npm run generate-docs
