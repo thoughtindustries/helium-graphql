@@ -44,6 +44,9 @@ module.exports = function processor({
         case 'learningPath':
           val = 'learning-path-1';
           break;
+        case 'courseGroup':
+          val = 'courseGroup-1';
+          break;
         case 'courseId':
         case 'course':
           val = 'course-1';
@@ -59,6 +62,8 @@ module.exports = function processor({
       }
 
       return isArray ? [val] : val;
+    } else if (field.name === 'contentTypes') {
+      return ['courseGroups', 'learningPaths'];
     }
   }
 };
