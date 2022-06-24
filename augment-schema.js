@@ -6,7 +6,7 @@ const { types } = introspectionFile.__schema;
 const commonIdFields = ['bundle', 'course', 'learningPath', 'license', 'client'];
 const recordTimestampFields = ['createdAt', 'updatedAt'];
 
-const formatName = name => name.replace(/([A-Z])/g, ' $1').replace(/^./, function(str){ return str.toUpperCase(); })
+const formatName = name => name.replace(/([A-Z])/g, ' $1').replace(/^./, function(str){ return str.toUpperCase().trim(); })
 
 const handleTypesFields = (type, fields) => {
   const { name } = type;
@@ -38,7 +38,7 @@ const handleTypesFields = (type, fields) => {
       const propVerb = field.name.slice(0, -2);
       description = `The time the field was ${propVerb}`;
     } else if (field.name === 'deleted') {
-      description = `Returns true when the ${formattedFieldName} is deleted.`;
+      description = `Returns true when the ${formattedName} is deleted.`;
     }
 
     field.description = description;
