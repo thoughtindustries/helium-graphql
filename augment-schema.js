@@ -7,6 +7,7 @@ const commonIdFields = ['bundle', 'course', 'learningPath', 'license', 'client']
 const recordTimestampFields = ['createdAt', 'updatedAt'];
 
 const formatName = name => name.replace(/([A-Z])/g, ' $1').replace(/^./, function(str){ return str.toUpperCase().trim(); })
+const withoutId = name => name.replace(/\s[Ii]d$/, '');
 
 const handleTypesFields = (type, fields) => {
   const { name } = type;
@@ -25,12 +26,12 @@ const handleTypesFields = (type, fields) => {
       description = definition.fields[field.name];
     } else if (field?.type?.name === 'ID' || field.name.endsWith('id')) {
       if (field.name === 'id') {
-        description = `The ID of the ${formattedName}`;
+        description = `The ID of the ${withoutId(formattedName)}`;
       } else if (field.name.endsWith('id')) {
         const descSubject = field.name.slice(0, -2);
         description = `The ID of the ${descSubject}`;
       } else {
-        description = `The ID of the ${formattedFieldName}`;
+        description = `The ID of the ${withoutId(formattedFieldName)}`;
       }
     } else if (commonIdFields.includes(field.name)) {
       description = `The ID of the ${formattedFieldName}`;

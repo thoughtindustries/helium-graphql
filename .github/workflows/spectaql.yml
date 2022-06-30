@@ -17,6 +17,7 @@ jobs:
       - name: Install and Build Spectaql
         run: |
           npm ci
+          npm run augment-schema
           npm run generate-docs
 
       - name: Deploy
