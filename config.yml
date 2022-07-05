@@ -17,4 +17,8 @@ info:
 introspection:
   introspectionFile: ./graphql.schema.json
   metadataFile: ./metadata.json
+  fieldExpansionDepth: 2
+  dynamicExamplesProcessingModule: ./example-processor.js
 
+extensions:
+  graphqlScalarExamples: true

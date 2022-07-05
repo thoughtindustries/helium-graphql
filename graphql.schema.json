@@ -72,7 +72,7 @@
         "fields": [
           {
             "name": "bundle",
-            "description": null,
+            "description": "The ID of the Bundle",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -84,7 +84,7 @@
           },
           {
             "name": "course",
-            "description": null,
+            "description": "The ID of the Course",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -112,7 +112,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Access Expiration",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -128,7 +128,7 @@
           },
           {
             "name": "learningPath",
-            "description": null,
+            "description": "The ID of the Learning Path",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -140,7 +140,7 @@
           },
           {
             "name": "license",
-            "description": null,
+            "description": "The ID of the License",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -361,7 +361,7 @@
           },
           {
             "name": "createdAt",
-            "description": null,
+            "description": "The time the field was created",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -519,7 +519,7 @@
           },
           {
             "name": "certificate",
-            "description": null,
+            "description": "The ID of the Certificate",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -563,7 +563,7 @@
           },
           {
             "name": "client",
-            "description": null,
+            "description": "The ID of the Client",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -595,7 +595,7 @@
           },
           {
             "name": "createdAt",
-            "description": null,
+            "description": "The time the field was created",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -707,7 +707,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Acme Challenge",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -855,7 +855,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Adobe Connect Webinar Connection",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -1020,7 +1020,7 @@
         "fields": [
           {
             "name": "learningPath",
-            "description": null,
+            "description": "The ID of the Learning Path",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -1059,7 +1059,7 @@
         "fields": [
           {
             "name": "license",
-            "description": null,
+            "description": "The ID of the License",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -1266,7 +1266,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Appearance Settings",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -1365,7 +1365,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Archived Content",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -1409,7 +1409,7 @@
           },
           {
             "name": "resource",
-            "description": null,
+            "description": "The ID of the Resource",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -1445,7 +1445,7 @@
           },
           {
             "name": "user",
-            "description": null,
+            "description": "The ID of the User",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -1484,7 +1484,7 @@
         "fields": [
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Assessment",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -1587,7 +1587,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Assessment Answer",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -1686,7 +1686,7 @@
           },
           {
             "name": "assignmentSubmissionId",
-            "description": null,
+            "description": "The ID of the Assignment Submission",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -1710,7 +1710,7 @@
           },
           {
             "name": "course",
-            "description": null,
+            "description": "The ID of the Course",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -1722,7 +1722,7 @@
           },
           {
             "name": "courseId",
-            "description": null,
+            "description": "The ID of the Course",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -1734,7 +1734,7 @@
           },
           {
             "name": "createdAt",
-            "description": null,
+            "description": "The time the field was created",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -1774,7 +1774,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Assessment Attempt",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -1790,7 +1790,7 @@
           },
           {
             "name": "linkedWorkbook",
-            "description": null,
+            "description": "The ID of the Linked Workbook",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -1914,7 +1914,7 @@
           },
           {
             "name": "topicId",
-            "description": null,
+            "description": "The ID of the Topic",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -1950,7 +1950,7 @@
           },
           {
             "name": "updatedAt",
-            "description": null,
+            "description": "The time the field was updated",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2189,7 +2189,7 @@
         "fields": [
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Assignment",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -2296,7 +2296,7 @@
           },
           {
             "name": "course",
-            "description": null,
+            "description": "The ID of the Course",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -2308,7 +2308,7 @@
           },
           {
             "name": "courseId",
-            "description": null,
+            "description": "The ID of the Course",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2320,7 +2320,7 @@
           },
           {
             "name": "createdAt",
-            "description": null,
+            "description": "The time the field was created",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2356,7 +2356,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Assignment Submission",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -2396,7 +2396,7 @@
           },
           {
             "name": "updatedAt",
-            "description": null,
+            "description": "The time the field was updated",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2533,7 +2533,7 @@
         "fields": [
           {
             "name": "accountId",
-            "description": null,
+            "description": "The ID of the Account",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2545,7 +2545,7 @@
           },
           {
             "name": "companyCode",
-            "description": null,
+            "description": "The ID of the Company Code",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2605,7 +2605,7 @@
           },
           {
             "name": "licenseKey",
-            "description": null,
+            "description": "The ID of the License Key",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2720,7 +2720,7 @@
           },
           {
             "name": "createdAt",
-            "description": null,
+            "description": "The time the field was created",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2732,7 +2732,7 @@
           },
           {
             "name": "deleted",
-            "description": null,
+            "description": "Returns true when the Award is deleted.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -2744,7 +2744,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Award",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -2894,7 +2894,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Award Qualification",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -3064,7 +3064,7 @@
         "fields": [
           {
             "name": "deleted",
-            "description": null,
+            "description": "Returns true when the Award Type is deleted.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -3088,7 +3088,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Award Type",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -3356,7 +3356,7 @@
         "fields": [
           {
             "name": "createdAt",
-            "description": null,
+            "description": "The time the field was created",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -3396,7 +3396,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Background Job",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -3550,7 +3550,7 @@
           },
           {
             "name": "deleted",
-            "description": null,
+            "description": "Returns true when the Badge is deleted.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -3562,7 +3562,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Badge",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -3749,7 +3749,7 @@
         "fields": [
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Block",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -3792,7 +3792,7 @@
           },
           {
             "name": "course",
-            "description": null,
+            "description": "The ID of the Course",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -3808,7 +3808,7 @@
           },
           {
             "name": "createdAt",
-            "description": null,
+            "description": "The time the field was created",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -3824,7 +3824,7 @@
           },
           {
             "name": "deleted",
-            "description": null,
+            "description": "Returns true when the Bookmark is deleted.",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -3840,7 +3840,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Bookmark",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -3880,7 +3880,7 @@
           },
           {
             "name": "topicId",
-            "description": null,
+            "description": "The ID of the Topic",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -3963,7 +3963,7 @@
           },
           {
             "name": "deleted",
-            "description": null,
+            "description": "Returns true when the Bookmark Folder is deleted.",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -3979,7 +3979,7 @@
           },
           {
             "name": "externalResourceId",
-            "description": null,
+            "description": "The ID of the External Resource",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -3991,7 +3991,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Bookmark Folder",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -4241,7 +4241,7 @@
         "fields": [
           {
             "name": "annualPlanId",
-            "description": null,
+            "description": "The ID of the Annual Plan",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -4265,7 +4265,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Bundle",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -4309,7 +4309,7 @@
           },
           {
             "name": "planId",
-            "description": null,
+            "description": "The ID of the Plan",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -4447,7 +4447,7 @@
           },
           {
             "name": "createdAt",
-            "description": null,
+            "description": "The time the field was created",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -4459,7 +4459,7 @@
           },
           {
             "name": "deleted",
-            "description": null,
+            "description": "Returns true when the Campaign is deleted.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -4487,7 +4487,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Campaign",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -4702,7 +4702,7 @@
           },
           {
             "name": "createdAt",
-            "description": null,
+            "description": "The time the field was created",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -4738,7 +4738,7 @@
           },
           {
             "name": "deleted",
-            "description": null,
+            "description": "Returns true when the Campaign Email is deleted.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -4750,7 +4750,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Campaign Email",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -5269,7 +5269,7 @@
         "fields": [
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Catalog Category",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -5387,7 +5387,7 @@
       {
         "kind": "OBJECT",
         "name": "CatalogMeta",
-        "description": null,
+        "description": "Contains metadata about a requested Catalog.",
         "fields": [
           {
             "name": "aggregations",
@@ -5427,7 +5427,7 @@
           },
           {
             "name": "contentTypes",
-            "description": null,
+            "description": "Content Types requested in the Catalog.",
             "args": [],
             "type": {
               "kind": "LIST",
@@ -5878,7 +5878,7 @@
           },
           {
             "name": "displayBundleId",
-            "description": null,
+            "description": "The ID of the Display Bundle",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -5950,7 +5950,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Catalog Settings",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -6089,7 +6089,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Catalog Subcategory",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -6227,7 +6227,7 @@
           },
           {
             "name": "createdAt",
-            "description": null,
+            "description": "The time the field was created",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -6243,7 +6243,7 @@
           },
           {
             "name": "deleted",
-            "description": null,
+            "description": "Returns true when the Central Library Item is deleted.",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -6283,7 +6283,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Central Library Item",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -6443,7 +6443,7 @@
           },
           {
             "name": "updatedAt",
-            "description": null,
+            "description": "The time the field was updated",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -6502,7 +6502,7 @@
           },
           {
             "name": "deleted",
-            "description": null,
+            "description": "Returns true when the Certificate is deleted.",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -6558,7 +6558,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Certificate",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -6686,7 +6686,7 @@
           },
           {
             "name": "resourceId",
-            "description": null,
+            "description": "The ID of the Resource",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -6824,7 +6824,7 @@
           },
           {
             "name": "awardTypeId",
-            "description": null,
+            "description": "The ID of the Award Type",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -6884,7 +6884,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Certificate Field",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -7294,7 +7294,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Certificate Template",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -7585,7 +7585,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Certificate Template Label",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -7840,7 +7840,7 @@
           },
           {
             "name": "createdAt",
-            "description": null,
+            "description": "The time the field was created",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -7904,7 +7904,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Charge",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -7956,7 +7956,7 @@
           },
           {
             "name": "orderId",
-            "description": null,
+            "description": "The ID of the Order",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -8095,7 +8095,7 @@
           },
           {
             "name": "planId",
-            "description": null,
+            "description": "The ID of the Plan",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -8107,7 +8107,7 @@
           },
           {
             "name": "purchasableId",
-            "description": null,
+            "description": "The ID of the Purchasable",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -8143,7 +8143,7 @@
           },
           {
             "name": "subscribableId",
-            "description": null,
+            "description": "The ID of the Subscribable",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -8330,7 +8330,7 @@
           },
           {
             "name": "createdAt",
-            "description": null,
+            "description": "The time the field was created",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -8386,7 +8386,7 @@
           },
           {
             "name": "dashboardLayoutId",
-            "description": null,
+            "description": "The ID of the Dashboard Layout",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -8618,7 +8618,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Client",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -8870,7 +8870,7 @@
           },
           {
             "name": "redemptionLayoutId",
-            "description": null,
+            "description": "The ID of the Redemption Layout",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -9014,7 +9014,7 @@
           },
           {
             "name": "updatedAt",
-            "description": null,
+            "description": "The time the field was updated",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -9037,7 +9037,7 @@
         "fields": [
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Client Subscription",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -9615,7 +9615,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Cloudflare Certificate",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -9846,7 +9846,7 @@
           },
           {
             "name": "createdAt",
-            "description": null,
+            "description": "The time the field was created",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -9858,7 +9858,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Comment",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -9914,7 +9914,7 @@
           },
           {
             "name": "updatedAt",
-            "description": null,
+            "description": "The time the field was updated",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -9942,7 +9942,7 @@
           },
           {
             "name": "userLikeId",
-            "description": null,
+            "description": "The ID of the User Like",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -9954,7 +9954,7 @@
           },
           {
             "name": "videoAsset",
-            "description": null,
+            "description": "The ID of the Video Asset",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -10118,7 +10118,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Company",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -10304,7 +10304,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Company Security Settings",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -10371,7 +10371,7 @@
           },
           {
             "name": "createdAt",
-            "description": null,
+            "description": "The time the field was created",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -10399,7 +10399,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Competency Assessment",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -10555,7 +10555,7 @@
           },
           {
             "name": "updatedAt",
-            "description": null,
+            "description": "The time the field was updated",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -10657,7 +10657,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Competency Assessment Question",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -10835,7 +10835,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Competency Assessment Response",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -10966,7 +10966,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Competency Assessment Response Question",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -11324,7 +11324,7 @@
           },
           {
             "name": "createdAt",
-            "description": null,
+            "description": "The time the field was created",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -11408,7 +11408,7 @@
           },
           {
             "name": "displayCourse",
-            "description": null,
+            "description": "The ID of the Display Course",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -11512,7 +11512,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Content",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -11792,7 +11792,7 @@
           },
           {
             "name": "updatedAt",
-            "description": null,
+            "description": "The time the field was updated",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -11887,7 +11887,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Content Body",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -12196,7 +12196,7 @@
           },
           {
             "name": "displayCourse",
-            "description": null,
+            "description": "The ID of the Display Course",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -12232,7 +12232,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Content Item",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -12950,7 +12950,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Content Subscription",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -13064,7 +13064,7 @@
         "fields": [
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Content Tabs",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -13170,7 +13170,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Coupon",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -13233,7 +13233,7 @@
           },
           {
             "name": "appearanceBlock",
-            "description": null,
+            "description": "The ID of the Appearance Block",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -13341,7 +13341,7 @@
           },
           {
             "name": "confirmationBlock",
-            "description": null,
+            "description": "The ID of the Confirmation Block",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -13389,7 +13389,7 @@
           },
           {
             "name": "createdAt",
-            "description": null,
+            "description": "The time the field was created",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -13557,7 +13557,7 @@
           },
           {
             "name": "fulfillmentCenter",
-            "description": null,
+            "description": "The ID of the Fulfillment Center",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -13637,7 +13637,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Course",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -13825,7 +13825,7 @@
           },
           {
             "name": "parentCourseId",
-            "description": null,
+            "description": "The ID of the Parent Course",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -13837,7 +13837,7 @@
           },
           {
             "name": "paywallsBlock",
-            "description": null,
+            "description": "The ID of the Paywalls Block",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -13993,7 +13993,7 @@
           },
           {
             "name": "sampleLessonId",
-            "description": null,
+            "description": "The ID of the Sample Lesson",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -14237,7 +14237,7 @@
           },
           {
             "name": "taxCategory",
-            "description": null,
+            "description": "The ID of the Tax Category",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -14261,7 +14261,7 @@
           },
           {
             "name": "termsBlock",
-            "description": null,
+            "description": "The ID of the Terms Block",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -14285,7 +14285,7 @@
           },
           {
             "name": "topicGroup",
-            "description": null,
+            "description": "The ID of the Topic Group",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -14297,7 +14297,7 @@
           },
           {
             "name": "updatedAt",
-            "description": null,
+            "description": "The time the field was updated",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -14543,7 +14543,7 @@
           },
           {
             "name": "course",
-            "description": null,
+            "description": "The ID of the Course",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -14559,7 +14559,7 @@
           },
           {
             "name": "courseAssessmentPassed",
-            "description": null,
+            "description": "The ID of the Course Assessment Passed",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -14571,7 +14571,7 @@
           },
           {
             "name": "courseAssignmentComplete",
-            "description": null,
+            "description": "The ID of the Course Assignment Complete",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -14583,7 +14583,7 @@
           },
           {
             "name": "courseMeetingAttended",
-            "description": null,
+            "description": "The ID of the Course Meeting Attended",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -14607,7 +14607,7 @@
           },
           {
             "name": "courseTopicViewed",
-            "description": null,
+            "description": "The ID of the Course Topic Viewed",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -14635,7 +14635,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Course Completion Criteria",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -14651,7 +14651,7 @@
           },
           {
             "name": "scormComplete",
-            "description": null,
+            "description": "The ID of the Scorm Complete",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -14663,7 +14663,7 @@
           },
           {
             "name": "surveyGizmoComplete",
-            "description": null,
+            "description": "The ID of the Survey Gizmo Complete",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -14703,7 +14703,7 @@
           },
           {
             "name": "videoTopicId",
-            "description": null,
+            "description": "The ID of the Video Topic",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -14715,7 +14715,7 @@
           },
           {
             "name": "xApiComplete",
-            "description": null,
+            "description": "The ID of the X Api Complete",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -15097,7 +15097,7 @@
           },
           {
             "name": "createdAt",
-            "description": null,
+            "description": "The time the field was created",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -15217,7 +15217,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Course Group",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -15632,7 +15632,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Course Tab",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -15755,7 +15755,7 @@
           },
           {
             "name": "clientId",
-            "description": null,
+            "description": "The ID of the Client",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -15767,7 +15767,7 @@
           },
           {
             "name": "createdAt",
-            "description": null,
+            "description": "The time the field was created",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -15799,7 +15799,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Credit Account",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -15903,7 +15903,7 @@
           },
           {
             "name": "updatedAt",
-            "description": null,
+            "description": "The time the field was updated",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -16035,7 +16035,7 @@
           },
           {
             "name": "clientId",
-            "description": null,
+            "description": "The ID of the Client",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -16047,7 +16047,7 @@
           },
           {
             "name": "createdAt",
-            "description": null,
+            "description": "The time the field was created",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -16107,7 +16107,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Credit Batch",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -16167,7 +16167,7 @@
           },
           {
             "name": "updatedAt",
-            "description": null,
+            "description": "The time the field was updated",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -16488,7 +16488,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Credit Card",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -16630,7 +16630,7 @@
         "fields": [
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Custom Field",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -16781,7 +16781,7 @@
           },
           {
             "name": "createdAt",
-            "description": null,
+            "description": "The time the field was created",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -16809,7 +16809,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Custom Language",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -16901,7 +16901,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Date Format",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -16963,7 +16963,7 @@
         "fields": [
           {
             "name": "annualPlanId",
-            "description": null,
+            "description": "The ID of the Annual Plan",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -16999,7 +16999,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Display Bundle",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -17023,7 +17023,7 @@
           },
           {
             "name": "planId",
-            "description": null,
+            "description": "The ID of the Plan",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -17074,7 +17074,7 @@
         "fields": [
           {
             "name": "learnerId",
-            "description": null,
+            "description": "The ID of the Learner",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -17086,7 +17086,7 @@
           },
           {
             "name": "managerId",
-            "description": null,
+            "description": "The ID of the Manager",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -17121,7 +17121,7 @@
           },
           {
             "name": "deleted",
-            "description": null,
+            "description": "Returns true when the Earned Badge is deleted.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -17133,7 +17133,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Earned Badge",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -17525,7 +17525,7 @@
           },
           {
             "name": "valid",
-            "description": null,
+            "description": "The ID of the val",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -17620,7 +17620,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Email Authorization List",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -17636,7 +17636,7 @@
           },
           {
             "name": "valid",
-            "description": null,
+            "description": "The ID of the val",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -17735,7 +17735,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Email Layout Settings",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -17762,7 +17762,7 @@
         "fields": [
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Embed Page",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -17826,7 +17826,7 @@
           },
           {
             "name": "updatedAt",
-            "description": null,
+            "description": "The time the field was updated",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -17937,7 +17937,7 @@
           },
           {
             "name": "variantId",
-            "description": null,
+            "description": "The ID of the Variant",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -18012,7 +18012,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Embed Page Variant",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -18072,7 +18072,7 @@
           },
           {
             "name": "updatedAt",
-            "description": null,
+            "description": "The time the field was updated",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -18352,7 +18352,7 @@
         "fields": [
           {
             "name": "course",
-            "description": null,
+            "description": "The ID of the Course",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -18446,7 +18446,7 @@
         "fields": [
           {
             "name": "learningPath",
-            "description": null,
+            "description": "The ID of the Learning Path",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -18683,7 +18683,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Feature",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -18784,7 +18784,7 @@
         "fields": [
           {
             "name": "course",
-            "description": null,
+            "description": "The ID of the Course",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -18800,7 +18800,7 @@
           },
           {
             "name": "createdAt",
-            "description": null,
+            "description": "The time the field was created",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -18812,7 +18812,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Forum",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -18852,7 +18852,7 @@
           },
           {
             "name": "sectionId",
-            "description": null,
+            "description": "The ID of the Section",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -18880,7 +18880,7 @@
           },
           {
             "name": "updatedAt",
-            "description": null,
+            "description": "The time the field was updated",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -18932,7 +18932,7 @@
         "fields": [
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Fulfillment Center",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -19109,7 +19109,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the I M I S Settings",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -19370,7 +19370,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Item Price",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -19522,7 +19522,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Knowledge Center Settings",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -19616,7 +19616,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Language",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -19747,7 +19747,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Layout",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -20129,7 +20129,7 @@
           },
           {
             "name": "client",
-            "description": null,
+            "description": "The ID of the Client",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -20165,7 +20165,7 @@
           },
           {
             "name": "createdAt",
-            "description": null,
+            "description": "The time the field was created",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -20305,7 +20305,7 @@
           },
           {
             "name": "fulfillmentCenter",
-            "description": null,
+            "description": "The ID of the Fulfillment Center",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -20357,7 +20357,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Learning Path",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -20433,7 +20433,7 @@
           },
           {
             "name": "layoutId",
-            "description": null,
+            "description": "The ID of the Layout",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -20457,7 +20457,7 @@
           },
           {
             "name": "learnerLayoutId",
-            "description": null,
+            "description": "The ID of the Learner Layout",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -20857,7 +20857,7 @@
           },
           {
             "name": "taxCategory",
-            "description": null,
+            "description": "The ID of the Tax Category",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -20881,7 +20881,7 @@
           },
           {
             "name": "updatedAt",
-            "description": null,
+            "description": "The time the field was updated",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -20893,7 +20893,7 @@
           },
           {
             "name": "videoAsset",
-            "description": null,
+            "description": "The ID of the Video Asset",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -20916,7 +20916,7 @@
         "fields": [
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Learning Path Action",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -20932,7 +20932,7 @@
           },
           {
             "name": "learningPath",
-            "description": null,
+            "description": "The ID of the Learning Path",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -21070,7 +21070,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Learning Path Tab",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -21165,7 +21165,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Learning Path Tabs",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -21224,7 +21224,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Lesson",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -21347,7 +21347,7 @@
           },
           {
             "name": "client",
-            "description": null,
+            "description": "The ID of the Client",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -21439,7 +21439,7 @@
           },
           {
             "name": "createdAt",
-            "description": null,
+            "description": "The time the field was created",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -21451,7 +21451,7 @@
           },
           {
             "name": "dashboardLayoutId",
-            "description": null,
+            "description": "The ID of the Dashboard Layout",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -21487,7 +21487,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the License",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -21595,7 +21595,7 @@
           },
           {
             "name": "parentLicenseId",
-            "description": null,
+            "description": "The ID of the Parent License",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -21763,7 +21763,7 @@
           },
           {
             "name": "updatedAt",
-            "description": null,
+            "description": "The time the field was updated",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -21806,7 +21806,7 @@
           },
           {
             "name": "createdAt",
-            "description": null,
+            "description": "The time the field was created",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -21850,7 +21850,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the License Node",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -21882,7 +21882,7 @@
           },
           {
             "name": "parentLicenseId",
-            "description": null,
+            "description": "The ID of the Parent License",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -21984,7 +21984,7 @@
           },
           {
             "name": "course",
-            "description": null,
+            "description": "The ID of the Course",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -21996,7 +21996,7 @@
           },
           {
             "name": "createdAt",
-            "description": null,
+            "description": "The time the field was created",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -22028,7 +22028,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Linked Workbook",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -22060,7 +22060,7 @@
           },
           {
             "name": "quizAttemptId",
-            "description": null,
+            "description": "The ID of the Quiz Attempt",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -22131,7 +22131,7 @@
         "fields": [
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Linked Workbook Category",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -22633,7 +22633,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Location",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -22807,7 +22807,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Looker Embed",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -23002,7 +23002,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Looker Embed Category",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -23125,7 +23125,7 @@
         "fields": [
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Looker Embed Subcategory",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -23188,7 +23188,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Looker Explore",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -23247,7 +23247,7 @@
         "fields": [
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Looker Explore Category",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -23306,7 +23306,7 @@
         "fields": [
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Looker Folder",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -23488,7 +23488,7 @@
           },
           {
             "name": "course",
-            "description": null,
+            "description": "The ID of the Course",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -23536,7 +23536,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Meeting",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -23584,7 +23584,7 @@
           },
           {
             "name": "locationId",
-            "description": null,
+            "description": "The ID of the Location",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -23873,7 +23873,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Milestone",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -23905,7 +23905,7 @@
           },
           {
             "name": "learningPath",
-            "description": null,
+            "description": "The ID of the Learning Path",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -24100,7 +24100,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Milestone Competency Assessment",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -24277,7 +24277,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Milestone Completion Criteria",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -24482,7 +24482,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Milestone Course",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -24575,7 +24575,7 @@
             "args": [
               {
                 "name": "resourceId",
-                "description": null,
+                "description": "The ID of the Resource",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -24616,11 +24616,11 @@
           },
           {
             "name": "ArchiveUserCourse",
-            "description": null,
+            "description": "Archives a user's access to a course.",
             "args": [
               {
                 "name": "id",
-                "description": null,
+                "description": "The ID of the course to be archived.",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -25023,7 +25023,7 @@
           },
           {
             "name": "course",
-            "description": null,
+            "description": "The ID of the Course",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -25039,7 +25039,7 @@
           },
           {
             "name": "createdAt",
-            "description": null,
+            "description": "The time the field was created",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -25055,7 +25055,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Note",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -25155,7 +25155,7 @@
           },
           {
             "name": "updatedAt",
-            "description": null,
+            "description": "The time the field was updated",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -25198,7 +25198,7 @@
         "fields": [
           {
             "name": "client",
-            "description": null,
+            "description": "The ID of the Client",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -25222,7 +25222,7 @@
           },
           {
             "name": "createdAt",
-            "description": null,
+            "description": "The time the field was created",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -25234,7 +25234,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Onboarding Survey",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -25266,7 +25266,7 @@
           },
           {
             "name": "updatedAt",
-            "description": null,
+            "description": "The time the field was updated",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -25313,7 +25313,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Onboarding Survey Question",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -25509,7 +25509,7 @@
         "fields": [
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Onboarding Survey Response",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -26306,7 +26306,7 @@
         "fields": [
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Organization",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -26345,7 +26345,7 @@
         "fields": [
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Page",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -26575,7 +26575,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Payment Intent",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -26792,7 +26792,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Product",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -26915,7 +26915,7 @@
         "fields": [
           {
             "name": "bundle",
-            "description": null,
+            "description": "The ID of the Bundle",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -26954,7 +26954,7 @@
         "fields": [
           {
             "name": "certificate",
-            "description": null,
+            "description": "The ID of the Certificate",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -26978,7 +26978,7 @@
           },
           {
             "name": "course",
-            "description": null,
+            "description": "The ID of the Course",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -27089,7 +27089,7 @@
               },
               {
                 "name": "layoutId",
-                "description": null,
+                "description": "The ID of the Layout",
                 "type": {
                   "kind": "SCALAR",
                   "name": "ID",
@@ -27101,7 +27101,7 @@
               },
               {
                 "name": "page",
-                "description": null,
+                "description": "The page number to return within the collection.",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -27185,7 +27185,7 @@
               },
               {
                 "name": "widgetId",
-                "description": null,
+                "description": "The ID of the Widget",
                 "type": {
                   "kind": "SCALAR",
                   "name": "ID",
@@ -27214,7 +27214,7 @@
             "args": [
               {
                 "name": "page",
-                "description": null,
+                "description": "The page number to return within the collection.",
                 "type": {
                   "kind": "SCALAR",
                   "name": "Int",
@@ -27311,7 +27311,7 @@
             "args": [
               {
                 "name": "user",
-                "description": null,
+                "description": "The ID of the User",
                 "type": {
                   "kind": "SCALAR",
                   "name": "ID",
@@ -27332,11 +27332,11 @@
           },
           {
             "name": "CompanyTranslations",
-            "description": null,
+            "description": "Returns translations from the user's Thought Industries instance.",
             "args": [
               {
                 "name": "namespace",
-                "description": null,
+                "description": "The language key for which translations should be returned.",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -27438,7 +27438,7 @@
             "args": [
               {
                 "name": "jobId",
-                "description": null,
+                "description": "The ID of the Job",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -28036,7 +28036,7 @@
           },
           {
             "name": "copyAnswerFromAssessmentId",
-            "description": null,
+            "description": "The ID of the Copy Answer From Assessment",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -28060,7 +28060,7 @@
           },
           {
             "name": "copyAnswerFromQuestionId",
-            "description": null,
+            "description": "The ID of the Copy Answer From Question",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -28072,7 +28072,7 @@
           },
           {
             "name": "deleted",
-            "description": null,
+            "description": "Returns true when the Question is deleted.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -28120,7 +28120,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Question",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -28164,7 +28164,7 @@
           },
           {
             "name": "parentQuestion",
-            "description": null,
+            "description": "The ID of the Parent Question",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -28316,7 +28316,7 @@
           },
           {
             "name": "questionCategoryId",
-            "description": null,
+            "description": "The ID of the Question Category",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -28328,7 +28328,7 @@
           },
           {
             "name": "questionId",
-            "description": null,
+            "description": "The ID of the Question",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -28443,7 +28443,7 @@
           },
           {
             "name": "deleted",
-            "description": null,
+            "description": "Returns true when the Question Category is deleted.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -28455,7 +28455,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Question Category",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -29239,7 +29239,7 @@
         "fields": [
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Question Pool",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -29954,7 +29954,7 @@
           },
           {
             "name": "questionCategoryId",
-            "description": null,
+            "description": "The ID of the Question Category",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -30121,7 +30121,7 @@
         "fields": [
           {
             "name": "client",
-            "description": null,
+            "description": "The ID of the Client",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -30145,7 +30145,7 @@
           },
           {
             "name": "createdAt",
-            "description": null,
+            "description": "The time the field was created",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -30157,7 +30157,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Recommendation Assessment",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -30189,7 +30189,7 @@
           },
           {
             "name": "updatedAt",
-            "description": null,
+            "description": "The time the field was updated",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -30240,7 +30240,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Recommendation Assessment Question",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -30312,7 +30312,7 @@
         "fields": [
           {
             "name": "assessmentResponseId",
-            "description": null,
+            "description": "The ID of the Assessment Response",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -30324,7 +30324,7 @@
           },
           {
             "name": "company",
-            "description": null,
+            "description": "The ID of the Company",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -30336,7 +30336,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Recommendation Assessment Response",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -30372,7 +30372,7 @@
           },
           {
             "name": "recommendationAssessment",
-            "description": null,
+            "description": "The ID of the Recommendation Assessment",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -30384,7 +30384,7 @@
           },
           {
             "name": "user",
-            "description": null,
+            "description": "The ID of the User",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -30627,7 +30627,7 @@
           },
           {
             "name": "client",
-            "description": null,
+            "description": "The ID of the Client",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -30695,7 +30695,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Redemption Code Group",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -30893,7 +30893,7 @@
           },
           {
             "name": "client",
-            "description": null,
+            "description": "The ID of the Client",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -30953,7 +30953,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Registration Code",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -31140,7 +31140,7 @@
         "fields": [
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Resource",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -31302,7 +31302,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Role",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -31621,7 +31621,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Rss Item",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -31910,7 +31910,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Rustici Launch",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -32081,7 +32081,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Rustici Registration",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -32242,7 +32242,7 @@
         "fields": [
           {
             "name": "bundle",
-            "description": null,
+            "description": "The ID of the Bundle",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -32254,7 +32254,7 @@
           },
           {
             "name": "bundleId",
-            "description": null,
+            "description": "The ID of the Bundle",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -32370,7 +32370,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the S S O Settings",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -32759,7 +32759,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Salesforce Connection",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -32986,7 +32986,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Salesforce Contact",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -33025,7 +33025,7 @@
         "fields": [
           {
             "name": "instanceId",
-            "description": null,
+            "description": "The ID of the Instance",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -33259,7 +33259,7 @@
           },
           {
             "name": "course",
-            "description": null,
+            "description": "The ID of the Course",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -33739,7 +33739,7 @@
         "fields": [
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Section",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -33810,7 +33810,7 @@
         "fields": [
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Shipping Method",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -33916,7 +33916,7 @@
           },
           {
             "name": "createdAt",
-            "description": null,
+            "description": "The time the field was created",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -33928,7 +33928,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Snippet",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -33960,7 +33960,7 @@
           },
           {
             "name": "updatedAt",
-            "description": null,
+            "description": "The time the field was updated",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -34062,7 +34062,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Stripe Account",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -34156,7 +34156,7 @@
         "fields": [
           {
             "name": "deleted",
-            "description": null,
+            "description": "Returns true when the Sublicense is deleted.",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -34172,7 +34172,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Sublicense",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -34377,7 +34377,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Tab",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -34567,7 +34567,7 @@
         "fields": [
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Tag",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -34618,7 +34618,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Tax Category",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -34673,7 +34673,7 @@
           },
           {
             "name": "createdAt",
-            "description": null,
+            "description": "The time the field was created",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -34685,7 +34685,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Testimonial",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -34791,7 +34791,7 @@
           },
           {
             "name": "bookmark",
-            "description": null,
+            "description": "The ID of the Bookmark",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -34803,7 +34803,7 @@
           },
           {
             "name": "client",
-            "description": null,
+            "description": "The ID of the Client",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -34831,7 +34831,7 @@
           },
           {
             "name": "course",
-            "description": null,
+            "description": "The ID of the Course",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -34843,7 +34843,7 @@
           },
           {
             "name": "createdAt",
-            "description": null,
+            "description": "The time the field was created",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -34887,7 +34887,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Thread",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -34943,7 +34943,7 @@
           },
           {
             "name": "updatedAt",
-            "description": null,
+            "description": "The time the field was updated",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -34971,7 +34971,7 @@
           },
           {
             "name": "videoAsset",
-            "description": null,
+            "description": "The ID of the Video Asset",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -35065,7 +35065,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Topic",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -35081,7 +35081,7 @@
           },
           {
             "name": "originalId",
-            "description": null,
+            "description": "The ID of the Original",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -35201,7 +35201,7 @@
           },
           {
             "name": "updatedAt",
-            "description": null,
+            "description": "The time the field was updated",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -35310,7 +35310,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Topic Search Result",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -35686,7 +35686,7 @@
         "fields": [
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Translation",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -35753,7 +35753,7 @@
         "fields": [
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Translations List",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -36059,7 +36059,7 @@
           },
           {
             "name": "client",
-            "description": null,
+            "description": "The ID of the Client",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -36071,7 +36071,7 @@
           },
           {
             "name": "clientId",
-            "description": null,
+            "description": "The ID of the Client",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -36127,7 +36127,7 @@
           },
           {
             "name": "createdAt",
-            "description": null,
+            "description": "The time the field was created",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -36179,7 +36179,7 @@
           },
           {
             "name": "externalCustomerId",
-            "description": null,
+            "description": "The ID of the External Customer",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -36203,7 +36203,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the User",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -36279,7 +36279,7 @@
           },
           {
             "name": "learnerUserId",
-            "description": null,
+            "description": "The ID of the Learner User",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -36291,7 +36291,7 @@
           },
           {
             "name": "managerUserId",
-            "description": null,
+            "description": "The ID of the Manager User",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -36523,7 +36523,7 @@
           },
           {
             "name": "sfAccountId",
-            "description": null,
+            "description": "The ID of the Sf Account",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -36535,7 +36535,7 @@
           },
           {
             "name": "sfContactId",
-            "description": null,
+            "description": "The ID of the Sf Contact",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -36603,7 +36603,7 @@
           },
           {
             "name": "stripeCustomerId",
-            "description": null,
+            "description": "The ID of the Stripe Customer",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -36639,7 +36639,7 @@
           },
           {
             "name": "updatedAt",
-            "description": null,
+            "description": "The time the field was updated",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -36761,7 +36761,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the User Custom Field",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -37016,7 +37016,7 @@
         "fields": [
           {
             "name": "course",
-            "description": null,
+            "description": "The ID of the Course",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -37207,7 +37207,7 @@
           },
           {
             "name": "redemptionCodeGroupId",
-            "description": null,
+            "description": "The ID of the Redemption Code Group",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -37596,7 +37596,7 @@
           },
           {
             "name": "course",
-            "description": null,
+            "description": "The ID of the Course",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -37612,7 +37612,7 @@
           },
           {
             "name": "createdAt",
-            "description": null,
+            "description": "The time the field was created",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -37644,7 +37644,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Waitlist",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -37660,7 +37660,7 @@
           },
           {
             "name": "updatedAt",
-            "description": null,
+            "description": "The time the field was updated",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -37719,7 +37719,7 @@
         "fields": [
           {
             "name": "course",
-            "description": null,
+            "description": "The ID of the Course",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -37817,7 +37817,7 @@
         "fields": [
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Webex Webinar Connection",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -37968,7 +37968,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Webinar Block",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -38223,7 +38223,7 @@
           },
           {
             "name": "meeting",
-            "description": null,
+            "description": "The ID of the Meeting",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -38401,7 +38401,7 @@
         "fields": [
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Webinar Recording",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -38433,7 +38433,7 @@
           },
           {
             "name": "meetingId",
-            "description": null,
+            "description": "The ID of the Meeting",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -38520,7 +38520,7 @@
           },
           {
             "name": "id",
-            "description": null,
+            "description": "The ID of the Zendesk Content",
             "args": [],
             "type": {
               "kind": "NON_NULL",
