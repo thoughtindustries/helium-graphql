@@ -11,7 +11,7 @@ const QUERIES = {
     CompanyTranslations: {
         metadescription: "Returns translations from the user's Thought Industries instance.",
         args: {
-            namespace: "The language key for which translations should be returned."
+            namespace: "test test test"
         }
     }
 };
