@@ -26573,11 +26573,11 @@
           },
           {
             "name": "CreateAssessmentAttempt",
-            "description": null,
+            "description": "Creates an assessment attempt for a course assessment. This is used to create a super quiz attempt with user's selected questions.",
             "args": [
               {
                 "name": "courseId",
-                "description": "The ID of the Course",
+                "description": "The ID of the course.",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -26593,7 +26593,7 @@
               },
               {
                 "name": "questions",
-                "description": null,
+                "description": "The questions user selected for super quiz.",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -26617,7 +26617,7 @@
               },
               {
                 "name": "topicId",
-                "description": "The ID of the Topic",
+                "description": "The ID of the topic",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -26646,11 +26646,11 @@
           },
           {
             "name": "CreateAssignmentSubmission",
-            "description": null,
+            "description": "Creates an assignment submission. This is used when user works on a manually graded assessment, the assessment attempt will be associated with the assignment submission.",
             "args": [
               {
                 "name": "asset",
-                "description": null,
+                "description": "The URL of the asset.",
                 "type": {
                   "kind": "SCALAR",
                   "name": "String",
@@ -26662,7 +26662,7 @@
               },
               {
                 "name": "assignment",
-                "description": "The ID of the Assignment",
+                "description": "The ID of the assignment.",
                 "type": {
                   "kind": "SCALAR",
                   "name": "ID",
@@ -26674,7 +26674,7 @@
               },
               {
                 "name": "body",
-                "description": null,
+                "description": "The body of the assignment submission.",
                 "type": {
                   "kind": "SCALAR",
                   "name": "String",
@@ -26686,7 +26686,7 @@
               },
               {
                 "name": "course",
-                "description": null,
+                "description": "The ID of the course.",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -26702,7 +26702,7 @@
               },
               {
                 "name": "quizAttempt",
-                "description": "The ID of the Quiz Attempt",
+                "description": "The ID of the assessment attempt.",
                 "type": {
                   "kind": "SCALAR",
                   "name": "ID",
@@ -26714,7 +26714,7 @@
               },
               {
                 "name": "videoAsset",
-                "description": null,
+                "description": "The URL of the video asset.",
                 "type": {
                   "kind": "SCALAR",
                   "name": "String",
@@ -26792,11 +26792,11 @@
           },
           {
             "name": "CreateComment",
-            "description": null,
+            "description": "Creates a comment.",
             "args": [
               {
                 "name": "asset",
-                "description": null,
+                "description": "The URL of the asset.",
                 "type": {
                   "kind": "SCALAR",
                   "name": "URL",
@@ -26808,7 +26808,7 @@
               },
               {
                 "name": "assetFileName",
-                "description": null,
+                "description": "The file name of the asset.",
                 "type": {
                   "kind": "SCALAR",
                   "name": "String",
@@ -26820,7 +26820,7 @@
               },
               {
                 "name": "body",
-                "description": null,
+                "description": "The body of the comment.",
                 "type": {
                   "kind": "SCALAR",
                   "name": "String",
@@ -26832,7 +26832,7 @@
               },
               {
                 "name": "clientId",
-                "description": "The ID of the Client",
+                "description": "The ID of the client.",
                 "type": {
                   "kind": "SCALAR",
                   "name": "ID",
@@ -26844,7 +26844,7 @@
               },
               {
                 "name": "commentableId",
-                "description": "The ID of the Commentable",
+                "description": "The ID of the commentable entity.",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -26860,7 +26860,7 @@
               },
               {
                 "name": "commentableType",
-                "description": null,
+                "description": "The type of the commentable entity.",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -26876,7 +26876,7 @@
               },
               {
                 "name": "notificationsEnabled",
-                "description": null,
+                "description": "Flag to enable notifications.",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -26892,7 +26892,7 @@
               },
               {
                 "name": "parentId",
-                "description": "The ID of the Parent",
+                "description": "The ID of the parent comment.",
                 "type": {
                   "kind": "SCALAR",
                   "name": "ID",
@@ -26904,7 +26904,7 @@
               },
               {
                 "name": "videoAsset",
-                "description": "The ID of the Video Asset",
+                "description": "The ID of the video asset.",
                 "type": {
                   "kind": "SCALAR",
                   "name": "ID",
@@ -26929,11 +26929,11 @@
           },
           {
             "name": "CreateUnansweredAssessmentAttempt",
-            "description": null,
+            "description": "Creates an assessment attempt for unanswered questions. This is used when user skips questions during an assessment attempt and decides to review the unanswered questions.",
             "args": [
               {
                 "name": "completedAssessmentAttemptId",
-                "description": "The ID of the Completed Assessment Attempt",
+                "description": "The ID of the last completed assessment attempt.",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -26949,7 +26949,7 @@
               },
               {
                 "name": "courseId",
-                "description": "The ID of the Course",
+                "description": "The ID of the course.",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -26965,7 +26965,7 @@
               },
               {
                 "name": "topicId",
-                "description": "The ID of the Topic",
+                "description": "The ID of the topic.",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -27056,11 +27056,11 @@
           },
           {
             "name": "MergeAssessmentAttemptIntoComplete",
-            "description": null,
+            "description": "Merges an assessment attempt into the last completed assessment attempt. This is used after user finishes reviewing the unanswered questions, the current assessment attempt will be merged to the last completed assessment attempt.",
             "args": [
               {
                 "name": "assessmentAttemptId",
-                "description": "The ID of the Assessment Attempt",
+                "description": "The ID of the current assessment attempt.",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -27076,7 +27076,7 @@
               },
               {
                 "name": "completedAssessmentAttemptId",
-                "description": "The ID of the Completed Assessment Attempt",
+                "description": "The ID of the last completed assessment attempt.",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -27278,11 +27278,11 @@
           },
           {
             "name": "UpdateAssessmentAttempt",
-            "description": null,
+            "description": "Updates an assessment attempt. This is used to record user's selected choice(s) for the active question, or to record when user finishes the assessment.",
             "args": [
               {
                 "name": "activeQuestion",
-                "description": null,
+                "description": "The active question with user's selected choice(s).",
                 "type": {
                   "kind": "INPUT_OBJECT",
                   "name": "QuestionInput",
@@ -27294,7 +27294,7 @@
               },
               {
                 "name": "assessmentAttempt",
-                "description": null,
+                "description": "The assessment attempt to be updated.",
                 "type": {
                   "kind": "INPUT_OBJECT",
                   "name": "AssessmentAttemptInput",
@@ -30208,11 +30208,11 @@
           },
           {
             "name": "LoadAssessmentAttemptWithQuestions",
-            "description": null,
+            "description": "Returns an existing or new assessment attempt with questions. This is used when user starts a new assessment attempt, or resumes from an in-progress assessment attempt.",
             "args": [
               {
                 "name": "assessmentAttemptId",
-                "description": "The ID of the Assessment Attempt",
+                "description": "The ID of the in-progress assessment attempt to resume from.",
                 "type": {
                   "kind": "SCALAR",
                   "name": "ID",
@@ -30224,7 +30224,7 @@
               },
               {
                 "name": "courseId",
-                "description": "The ID of the Course",
+                "description": "The ID of the course.",
                 "type": {
                   "kind": "SCALAR",
                   "name": "ID",
@@ -30236,7 +30236,7 @@
               },
               {
                 "name": "id",
-                "description": null,
+                "description": "The ID of the topic.",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -30252,7 +30252,7 @@
               },
               {
                 "name": "instructorAssessmentUser",
-                "description": "The ID of the Instructor Assessment User",
+                "description": "The ID of the user on behalf of whom the instructor takes the assessment.",
                 "type": {
                   "kind": "SCALAR",
                   "name": "ID",
@@ -30264,7 +30264,7 @@
               },
               {
                 "name": "linkedWorkbook",
-                "description": "The ID of the Linked Workbook",
+                "description": "The ID of the linked workbook.",
                 "type": {
                   "kind": "SCALAR",
                   "name": "ID",
@@ -30276,7 +30276,7 @@
               },
               {
                 "name": "shouldShuffleAndSubset",
-                "description": null,
+                "description": "Flag to randomly order questions and choose a subset of questions to use.",
                 "type": {
                   "kind": "SCALAR",
                   "name": "Boolean",
@@ -30288,7 +30288,7 @@
               },
               {
                 "name": "topicType",
-                "description": null,
+                "description": "The type of the topic.",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -30317,11 +30317,11 @@
           },
           {
             "name": "LoadAssessmentAttemptsByTopicOrCourse",
-            "description": null,
+            "description": "Returns assessment attempts by course and/or topic.",
             "args": [
               {
                 "name": "courseId",
-                "description": "The ID of the Course",
+                "description": "The ID of the course.",
                 "type": {
                   "kind": "SCALAR",
                   "name": "ID",
@@ -30333,7 +30333,7 @@
               },
               {
                 "name": "topicId",
-                "description": "The ID of the Topic",
+                "description": "The ID of the topic.",
                 "type": {
                   "kind": "SCALAR",
                   "name": "ID",
@@ -30366,11 +30366,11 @@
           },
           {
             "name": "LoadSuperQuizInfo",
-            "description": null,
+            "description": "Returns super quiz details from user's configuration.",
             "args": [
               {
                 "name": "courseId",
-                "description": "The ID of the Course",
+                "description": "The ID of the course.",
                 "type": {
                   "kind": "SCALAR",
                   "name": "ID",
@@ -30382,7 +30382,7 @@
               },
               {
                 "name": "includeCorrectAnswers",
-                "description": null,
+                "description": "Flag to include questions the user previously got correct.",
                 "type": {
                   "kind": "SCALAR",
                   "name": "Boolean",
@@ -30394,7 +30394,7 @@
               },
               {
                 "name": "quizzes",
-                "description": null,
+                "description": "The IDs of the quiz user selects.",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
