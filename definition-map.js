@@ -33,7 +33,7 @@ const QUERIES = {
         metadescription: "Returns super quiz details from user's configuration.",
         args: {
             includeCorrectAnswers: "Flag to include questions the user previously got correct.",
-            quizzes: "The IDs of the Quiz user selects."
+            quizzes: "The IDs of the Quizzes user selects."
         }
     }
 };
