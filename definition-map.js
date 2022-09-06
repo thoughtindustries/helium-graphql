@@ -17,9 +17,8 @@ const QUERIES = {
     LoadAssessmentAttemptWithQuestions: {
         metadescription: "Returns an existing or new assessment attempt with questions. This is used when user starts a new assessment attempt, or resumes from an in-progress assessment attempt.",
         args: {
-            id: "The ID of the topic.",
-            topicType: "The type of the topic.",
-            courseId: "The ID of the course.",
+            id: "The ID of the Topic.",
+            topicType: "The type of the Topic.",
             linkedWorkbook: "The ID of the linked workbook.",
             assessmentAttemptId: "The ID of the in-progress assessment attempt to resume from.",
             instructorAssessmentUser: "The ID of the user on behalf of whom the instructor takes the assessment.",
@@ -28,17 +27,13 @@ const QUERIES = {
     },
     LoadAssessmentAttemptsByTopicOrCourse: {
         metadescription: "Returns assessment attempts by course and/or topic.",
-        args: {
-            topicId: "The ID of the topic.",
-            courseId: "The ID of the course."
-        }
+        args: {}
     },
     LoadSuperQuizInfo: {
         metadescription: "Returns super quiz details from user's configuration.",
         args: {
-            courseId: "The ID of the course.",
             includeCorrectAnswers: "Flag to include questions the user previously got correct.",
-            quizzes: "The IDs of the quiz user selects."
+            quizzes: "The IDs of the Quiz user selects."
         }
     }
 };
@@ -60,8 +55,6 @@ const MUTATIONS = {
     CreateAssessmentAttempt: {
         metadescription: "Creates an assessment attempt for a course assessment. This is used to create a super quiz attempt with user's selected questions.",
         args: {
-            topicId: "The ID of the topic",
-            courseId: "The ID of the course.",
             questions: "The questions user selected for super quiz."
         }
     },
@@ -79,7 +72,6 @@ const MUTATIONS = {
     CreateComment: {
         metadescription: "Creates a comment.",
         args: {
-            clientId: "The ID of the client.",
             commentableId: "The ID of the commentable entity.",
             commentableType: "The type of the commentable entity.",
             body: "The body of the comment.",
@@ -93,16 +85,13 @@ const MUTATIONS = {
     CreateUnansweredAssessmentAttempt: {
         metadescription: "Creates an assessment attempt for unanswered questions. This is used when user skips questions during an assessment attempt and decides to review the unanswered questions.",
         args: {
-            topicId: "The ID of the topic.",
-            courseId: "The ID of the course.",
             completedAssessmentAttemptId: "The ID of the last completed assessment attempt.",
         }
     },
     MergeAssessmentAttemptIntoComplete: {
         metadescription: "Merges an assessment attempt into the last completed assessment attempt. This is used after user finishes reviewing the unanswered questions, the current assessment attempt will be merged to the last completed assessment attempt.",
         args: {
-            completedAssessmentAttemptId: "The ID of the last completed assessment attempt.",
-            assessmentAttemptId: "The ID of the current assessment attempt."
+            completedAssessmentAttemptId: "The ID of the last completed assessment attempt."
         }
     }
 }
