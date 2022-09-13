@@ -30394,7 +30394,7 @@
               },
               {
                 "name": "quizzes",
-                "description": "The IDs of the Quiz user selects.",
+                "description": "The IDs of the Quizzes user selects.",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
