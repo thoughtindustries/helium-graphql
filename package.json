@@ -10,7 +10,7 @@
     "generate-docs": "npx spectaql config.yml"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "private": true,
   "dependencies": {
     "spectaql": "^1.2.1"
