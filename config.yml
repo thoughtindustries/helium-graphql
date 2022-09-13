@@ -10,8 +10,8 @@ info:
     url: http://www.thoughtindustries.com/support
     email: support@thoughtindustries.com
   license:
-    name: Apache 2.0
-    url: https://www.apache.org/licenses/LICENSE-2.0.html
+    name: MIT
+    url: https://github.com/thoughtindustries/helium-graphql/blob/main/LICENSE.md
   x-url: https://example.thoughtindustries.com/helium
 
 introspection:
