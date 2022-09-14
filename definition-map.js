@@ -93,6 +93,20 @@ const MUTATIONS = {
         args: {
             completedAssessmentAttemptId: "The ID of the last completed assessment attempt."
         }
+    },
+    Login: {
+        metadescription: `Attempts to login the current user. 
+        The mutation first authenticates the user.
+        The following checks are then run:
+        Ensure the password does not need to be reset due to inactivity. 
+        Ensures the email does not need to be verified.
+        If these checks are successful, the mutation will attempt to log the user in.
+        If the log in is unsuccesful, the mutation provides error status handling.
+        `,
+        args: {
+            email: "The email of the Current User attempting to log in.",
+            password: "The password of the Current User attempting to log in.",
+        }
     }
 }
 
