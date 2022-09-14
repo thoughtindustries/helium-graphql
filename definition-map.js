@@ -95,14 +95,7 @@ const MUTATIONS = {
         }
     },
     Login: {
-        metadescription: `Attempts to login the current user. 
-        The mutation first authenticates the user.
-        The following checks are then run:
-        Ensure the password does not need to be reset due to inactivity. 
-        Ensures the email does not need to be verified.
-        If these checks are successful, the mutation will attempt to log the user in.
-        If the log in is unsuccesful, the mutation provides error status handling.
-        `,
+        metadescription: "Attempts to login the user. The mutation will perform a number of checks such as password validity and email verification status. If successful, the user will be logged in and an authentication token returned. If not, an appropriate error will be provided.",
         args: {
             email: "The email of the Current User attempting to log in.",
             password: "The password of the Current User attempting to log in.",

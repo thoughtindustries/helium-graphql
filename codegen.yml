@@ -1,5 +1,5 @@
 overwrite: true
-schema: "https://home.thoughtindustries.com/helium"
+schema: "https://alexoneilsandbox.thoughtindustries.com/helium?apiKey=b8a4y6gls7fva0xrb5iqfof9r6r8l7s4"
 config:
   avoidOptionals: false
   maybeValue: T
