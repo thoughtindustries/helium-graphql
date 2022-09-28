@@ -104,9 +104,9 @@ const MUTATIONS = {
 }
 
 const DEFINITION_MAP = {
-    ...TYPES,
-    ...QUERIES,
-    ...MUTATIONS
+    TYPES,
+    QUERIES,
+    MUTATIONS
 }
 
 module.exports = DEFINITION_MAP;

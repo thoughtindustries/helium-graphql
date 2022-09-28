@@ -1,5 +1,5 @@
 const introspectionFile = require('./graphql.schema.json');
-const DEFINITION_MAP = require('./definition-map');
+const { TYPES, QUERIES, MUTATIONS } = require('./definition-map');
 const { writeFile } = require('fs/promises');
 const { types } = introspectionFile.__schema;
 
@@ -11,7 +11,7 @@ const withoutId = name => name.replace(/\s[Ii]d$/, '');
 
 const handleTypesFields = (type, fields) => {
   const { name } = type;
-  const definition = DEFINITION_MAP[name];
+  const definition = TYPES[name];
   const formattedName = formatName(name);
 
   if (definition?.metadescription) {
@@ -47,7 +47,7 @@ const handleTypesFields = (type, fields) => {
 };
 
 const handleQueryOrMutation = field => {
-  const definition = DEFINITION_MAP[field.name];
+  const definition = QUERIES[field.name] || MUTATIONS[field.name];
 
   if (definition?.metadescription) {
     field.description = definition.metadescription;
