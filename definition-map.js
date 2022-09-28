@@ -98,13 +98,6 @@ const MUTATIONS = {
             completedAssessmentAttemptId: "The ID of the last completed assessment attempt."
         }
     },
-    Login: {
-        metadescription: "Attempts to login the user. The mutation will perform a number of checks such as password validity and email verification status. If successful, the user will be logged in and an authentication token returned. If not, an appropriate error will be provided.",
-        args: {
-            email: "The email of the Current User attempting to log in.",
-            password: "The password of the Current User attempting to log in.",
-        }
-    }
 }
 
 const DEFINITION_MAP = {
