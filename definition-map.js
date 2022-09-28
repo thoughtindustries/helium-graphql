@@ -14,6 +14,10 @@ const QUERIES = {
             namespace: "test test test"
         }
     },
+    LanguagesQuery: {
+        metadescription: "returns an array of information about available languages",
+        args: {}
+    },
     LoadAssessmentAttemptWithQuestions: {
         metadescription: "Returns an existing or new assessment attempt with questions. This is used when user starts a new assessment attempt, or resumes from an in-progress assessment attempt.",
         args: {
