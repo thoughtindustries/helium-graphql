@@ -46,8 +46,8 @@ const handleTypesFields = (type, fields) => {
   }
 };
 
-const handleQueryOrMutation = field => {
-  const definition = QUERIES[field.name] || MUTATIONS[field.name];
+const handleQueryOrMutation = (field, isQuery) => {
+  const definition = isQuery ? QUERIES[field.name] : MUTATIONS[field.name];
 
   if (definition?.metadescription) {
     field.description = definition.metadescription;
@@ -81,7 +81,8 @@ const handleQueryOrMutation = field => {
 
     if (kind === 'OBJECT') {
       if (name === 'Query' || name === 'Mutation') {
-        fields.forEach(field => handleQueryOrMutation(field));
+        const isQuery = name === 'Query';
+        fields.forEach(field => handleQueryOrMutation(field, isQuery));
       } else if (name !== 'Query' && name !== 'Mutation') {
         // defined Object Types, e.g., AllocatedLearningPath, UserPurchases, etc.
         handleTypesFields(type, fields);
