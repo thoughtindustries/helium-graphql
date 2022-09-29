@@ -15,7 +15,7 @@ const QUERIES = {
         }
     },
     LanguagesQuery: {
-        metadescription: "returns an array of information about available languages",
+        metadescription: "Returns array of Language objects configured in the Thought Industries instance",
         args: {}
     },
     LoadAssessmentAttemptWithQuestions: {
