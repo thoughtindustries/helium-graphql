@@ -30574,7 +30574,7 @@
             "args": [
               {
                 "name": "contentTypes",
-                "description": "The list of content types.",
+                "description": "The list of content types to be queried.",
                 "type": {
                   "kind": "LIST",
                   "name": null,
@@ -30642,7 +30642,7 @@
               },
               {
                 "name": "resultsDisplayType",
-                "description": "The display type. Default to the value configured for catalog from the user's Thought Industries instance. If the catalog is not configured, it falls back to value `grid`. When the value is `calendar`, it overrides the values for argument `sortColumn` to be `displayDate` and `sortDirection` to be `asc`.",
+                "description": "The display type. Defaults to the value configured for catalog from the user's Thought Industries instance. If the catalog is not configured, it falls back to value `grid`. When the value is `calendar`, it overrides the values for argument `sortColumn` to be `displayDate` and `sortDirection` to be `asc`.",
                 "type": {
                   "kind": "ENUM",
                   "name": "ContentItemDisplayType",
@@ -30654,7 +30654,7 @@
               },
               {
                 "name": "sortColumn",
-                "description": "The content data column used to sort the collection. Default to the value configured for catalog from the user's Thought Industries instance. If the catalog is not configured, it falls back to value `createdAt`. When the value is `relevance`, it requires the argument `query` also to be set, or it falls back to value `courseStartDate`.",
+                "description": "The content data column used to sort the collection. Defaults to the value configured for catalog from the user's Thought Industries instance. If the catalog is not configured, it falls back to value `createdAt`. When the value is `relevance`, it requires the argument `query` also to be set, or it falls back to value `courseStartDate`.",
                 "type": {
                   "kind": "ENUM",
                   "name": "SortColumn",
@@ -30666,7 +30666,7 @@
               },
               {
                 "name": "sortDirection",
-                "description": "The direction used to sort the collection. Default to the value configured for catalog from the user's Thought Industries instance. If the catalog is not configured, it falls back to value `desc`. When the argument `sortColumn` is `relevance`, it requires the argument `query` also to be set, or it falls back to value `desc`.",
+                "description": "The direction used to sort the collection. Defaults to the value configured for catalog from the user's Thought Industries instance. If the catalog is not configured, it falls back to value `desc`. When the argument `sortColumn` is `relevance`, it requires the argument `query` also to be set, or it falls back to value `desc`.",
                 "type": {
                   "kind": "ENUM",
                   "name": "SortDirection",
