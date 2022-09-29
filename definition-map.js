@@ -14,6 +14,19 @@ const QUERIES = {
             namespace: "test test test"
         }
     },
+    CatalogContent: {
+        metadescription: "Returns catalog content items and meta data matching with the criterias.",
+        args: {
+            sortColumn: "The content data column used to sort the collection. Defaults to the value configured for catalog from the user's Thought Industries instance. If the catalog is not configured, it falls back to value `createdAt`. When the value is `relevance`, it requires the argument `query` also to be set, or it falls back to value `courseStartDate`.",
+            sortDirection: "The direction used to sort the collection. Defaults to the value configured for catalog from the user's Thought Industries instance. If the catalog is not configured, it falls back to value `desc`. When the argument `sortColumn` is `relevance`, it requires the argument `query` also to be set, or it falls back to value `desc`.",
+            resultsDisplayType: "The display type. Defaults to the value configured for catalog from the user's Thought Industries instance. If the catalog is not configured, it falls back to value `grid`. When the value is `calendar`, it overrides the values for argument `sortColumn` to be `displayDate` and `sortDirection` to be `asc`.",
+            token: "The secure catalog query. The value is encoded by the secret key of user's Thought Industries instance.",
+            labels: "The list of aggregation labels. The order of list items will match with argument `values`.",
+            values: "The list of aggregation values. The order of list items will match with argument `labels`.",
+            contentTypes: "The list of content types to be queried.",
+            query: "The search query."
+        }
+    },
     LoadAssessmentAttemptWithQuestions: {
         metadescription: "Returns an existing or new assessment attempt with questions. This is used when user starts a new assessment attempt, or resumes from an in-progress assessment attempt.",
         args: {
@@ -104,9 +117,9 @@ const MUTATIONS = {
 }
 
 const DEFINITION_MAP = {
-    ...TYPES,
-    ...QUERIES,
-    ...MUTATIONS
+    TYPES,
+    QUERIES,
+    MUTATIONS
 }
 
 module.exports = DEFINITION_MAP;
