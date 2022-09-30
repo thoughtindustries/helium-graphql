@@ -31224,7 +31224,7 @@
           },
           {
             "name": "LoadSuperQuizInfo",
-            "description": "Returns super quiz details from user's configuration.",
+            "description": "This query loads quiz questions and other data about the entered quiz(s). This query allows you to fetch questions for multiple quizzes at the same time.",
             "args": [
               {
                 "name": "courseId",
@@ -38957,11 +38957,11 @@
       {
         "kind": "OBJECT",
         "name": "SuperQuiz",
-        "description": null,
+        "description": "Contains quiz questions and other data about the entered quiz(s).",
         "fields": [
           {
             "name": "displayAllHints",
-            "description": null,
+            "description": "Display all hints. This is only applicable when all the selected Quizzes enable the `Display all Hints` option from the user's Thought Industries instance.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -38973,7 +38973,7 @@
           },
           {
             "name": "navigationDisabled",
-            "description": null,
+            "description": "Disables navigation during quiz. This is only applicable when all the selected Quizzes enable the `Disable Navigation During Quiz` option from the user's Thought Industries instance.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -38985,7 +38985,7 @@
           },
           {
             "name": "questionSkipEnabled",
-            "description": null,
+            "description": "Allows learner to skip questions. This is only applicable when all the selected Quizzes enable the `Allow Learner to Skip Questions` option from the user's Thought Industries instance.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -38997,7 +38997,7 @@
           },
           {
             "name": "questions",
-            "description": null,
+            "description": "The collection of Quiz questions user selects.",
             "args": [],
             "type": {
               "kind": "LIST",
@@ -39017,7 +39017,7 @@
           },
           {
             "name": "quizzes",
-            "description": null,
+            "description": "The IDs of the Quizzes user selects and has access to.",
             "args": [],
             "type": {
               "kind": "LIST",
@@ -39037,7 +39037,7 @@
           },
           {
             "name": "timePerQuestionInSeconds",
-            "description": null,
+            "description": "The estimated time per question. This is only applicable when all the selected Quizzes enable the `Estimated Time Per Question` option and use the same value from the user's Thought Industries instance.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -39049,7 +39049,7 @@
           },
           {
             "name": "timerEnabled",
-            "description": null,
+            "description": "Enables timer. This is only applicable when all the selected Quizzes enable the `Enable Timer` option from the user's Thought Industries instance.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -39061,7 +39061,7 @@
           },
           {
             "name": "totalTimeInSeconds",
-            "description": null,
+            "description": "The total estimated time for all of the Quiz questions. This is only applicable when all the selected Quizzes enable the `Estimated Time Per Question` option from the user's Thought Industries instance.",
             "args": [],
             "type": {
               "kind": "SCALAR",
