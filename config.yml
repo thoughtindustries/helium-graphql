@@ -1,14 +1,13 @@
 spectaql:
-  themeDir: "spectaql"
+  themeDir: "./custom-theme"
 
 info:
   title: Helium GraphQL API Reference
   description: Documentation related to available types, queries, mutations, etc. in Helium
   termsOfService: https://www.thoughtindustries.com
   contact:
-    name: Support
-    url: http://www.thoughtindustries.com/support
-    email: support@thoughtindustries.com
+    name: Get Support
+    url: https://discord.gg/cTJBX4muVn
   license:
     name: MIT
     url: https://github.com/thoughtindustries/helium-graphql/blob/main/LICENSE.md
