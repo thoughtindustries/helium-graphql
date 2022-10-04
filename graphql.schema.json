@@ -38961,7 +38961,7 @@
         "fields": [
           {
             "name": "displayAllHints",
-            "description": "Display all hints. This is only applicable when all the selected Quizzes enable the `Display all Hints` option from the user's Thought Industries instance.",
+            "description": "Display all hints. This is only applicable when all the Quizzes have the `Display all Hints` option enabled.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -38973,7 +38973,7 @@
           },
           {
             "name": "navigationDisabled",
-            "description": "Disables navigation during quiz. This is only applicable when all the selected Quizzes enable the `Disable Navigation During Quiz` option from the user's Thought Industries instance.",
+            "description": "Disables navigation during quiz. This is only applicable when all the Quizzes have the `Disable Navigation During Quiz` option enabled.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -38985,7 +38985,7 @@
           },
           {
             "name": "questionSkipEnabled",
-            "description": "Allows learner to skip questions. This is only applicable when all the selected Quizzes enable the `Allow Learner to Skip Questions` option from the user's Thought Industries instance.",
+            "description": "Allows learner to skip questions. This is only applicable when all the selected Quizzes have the `Allow Learner to Skip Questions` option enabled.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -39037,7 +39037,7 @@
           },
           {
             "name": "timePerQuestionInSeconds",
-            "description": "The estimated time per question. This is only applicable when all the selected Quizzes enable the `Estimated Time Per Question` option and use the same value from the user's Thought Industries instance.",
+            "description": "The estimated time per question. This is only applicable when all the Quizzes have the `Estimated Time Per Question` option enabled and use the same value.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -39049,7 +39049,7 @@
           },
           {
             "name": "timerEnabled",
-            "description": "Enables timer. This is only applicable when all the selected Quizzes enable the `Enable Timer` option from the user's Thought Industries instance.",
+            "description": "Enables timer. This is only applicable when all the Quizzes have the `Enable Timer` option enabled.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -39061,7 +39061,7 @@
           },
           {
             "name": "totalTimeInSeconds",
-            "description": "The total estimated time for all of the Quiz questions. This is only applicable when all the selected Quizzes enable the `Estimated Time Per Question` option from the user's Thought Industries instance.",
+            "description": "The total estimated time for all of the Quiz questions. This is only applicable when all the Quizzes have the `Estimated Time Per Question` option enabled.",
             "args": [],
             "type": {
               "kind": "SCALAR",

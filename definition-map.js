@@ -10,12 +10,12 @@ const TYPES = {
         fields: {
             quizzes: "The IDs of the Quizzes user selects and has access to.",
             questions: "The collection of Quiz questions user selects.",
-            totalTimeInSeconds: "The total estimated time for all of the Quiz questions. This is only applicable when all the selected Quizzes enable the `Estimated Time Per Question` option from the user's Thought Industries instance.",
-            questionSkipEnabled: "Allows learner to skip questions. This is only applicable when all the selected Quizzes enable the `Allow Learner to Skip Questions` option from the user's Thought Industries instance.",
-            timerEnabled: "Enables timer. This is only applicable when all the selected Quizzes enable the `Enable Timer` option from the user's Thought Industries instance.",
-            navigationDisabled: "Disables navigation during quiz. This is only applicable when all the selected Quizzes enable the `Disable Navigation During Quiz` option from the user's Thought Industries instance.",
-            displayAllHints: "Display all hints. This is only applicable when all the selected Quizzes enable the `Display all Hints` option from the user's Thought Industries instance.",
-            timePerQuestionInSeconds: "The estimated time per question. This is only applicable when all the selected Quizzes enable the `Estimated Time Per Question` option and use the same value from the user's Thought Industries instance."
+            totalTimeInSeconds: "The total estimated time for all of the Quiz questions. This is only applicable when all the Quizzes have the `Estimated Time Per Question` option enabled.",
+            questionSkipEnabled: "Allows learner to skip questions. This is only applicable when all the selected Quizzes have the `Allow Learner to Skip Questions` option enabled.",
+            timerEnabled: "Enables timer. This is only applicable when all the Quizzes have the `Enable Timer` option enabled.",
+            navigationDisabled: "Disables navigation during quiz. This is only applicable when all the Quizzes have the `Disable Navigation During Quiz` option enabled.",
+            displayAllHints: "Display all hints. This is only applicable when all the Quizzes have the `Display all Hints` option enabled.",
+            timePerQuestionInSeconds: "The estimated time per question. This is only applicable when all the Quizzes have the `Estimated Time Per Question` option enabled and use the same value."
         }
     }
 };
