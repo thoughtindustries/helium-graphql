@@ -4,6 +4,19 @@ const TYPES = {
         fields: {
             contentTypes: "Content Types requested in the Catalog."
         }
+    },
+    SuperQuiz: {
+        metadescription: "Contains quiz questions and other data about the entered quiz(s).",
+        fields: {
+            quizzes: "The IDs of the Quizzes user selects and has access to.",
+            questions: "The collection of Quiz questions user selects.",
+            totalTimeInSeconds: "The total estimated time for all of the Quiz questions. This is only applicable when all the Quizzes have the `Estimated Time Per Question` option enabled.",
+            questionSkipEnabled: "Allows learner to skip questions. This is only applicable when all the selected Quizzes have the `Allow Learner to Skip Questions` option enabled.",
+            timerEnabled: "Enables timer. This is only applicable when all the Quizzes have the `Enable Timer` option enabled.",
+            navigationDisabled: "Disables navigation during quiz. This is only applicable when all the Quizzes have the `Disable Navigation During Quiz` option enabled.",
+            displayAllHints: "Display all hints. This is only applicable when all the Quizzes have the `Display all Hints` option enabled.",
+            timePerQuestionInSeconds: "The estimated time per question. This is only applicable when all the Quizzes have the `Estimated Time Per Question` option enabled and use the same value."
+        }
     }
 };
 
@@ -43,7 +56,7 @@ const QUERIES = {
         args: {}
     },
     LoadSuperQuizInfo: {
-        metadescription: "Returns super quiz details from user's configuration.",
+        metadescription: "This query loads quiz questions and other data about the entered quiz(s). This query allows you to fetch questions for multiple quizzes at the same time.",
         args: {
             includeCorrectAnswers: "Flag to include questions the user previously got correct.",
             quizzes: "The IDs of the Quizzes user selects."
