@@ -20,6 +20,16 @@ const TYPES = {
     }
 };
 
+const ENUMS = {
+    TranslationNamespace: {
+        metadescription: "The namespace used to specify the content category for the translations.",
+        enumValues: {
+            emails: "Used for email content.",
+            lms: "Used for platform content."
+        }
+    }
+};
+
 const QUERIES = {
     CompanyTranslations: {
         metadescription: "Returns translations from the user's Thought Industries instance.",
@@ -131,6 +141,7 @@ const MUTATIONS = {
 
 const DEFINITION_MAP = {
     TYPES,
+    ENUMS,
     QUERIES,
     MUTATIONS
 }

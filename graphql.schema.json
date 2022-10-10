@@ -42167,20 +42167,20 @@
       {
         "kind": "ENUM",
         "name": "TranslationNamespace",
-        "description": null,
+        "description": "The namespace used to specify the content category for the translations.",
         "fields": null,
         "inputFields": null,
         "interfaces": null,
         "enumValues": [
           {
             "name": "emails",
-            "description": null,
+            "description": "Used for email content.",
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "lms",
-            "description": null,
+            "description": "Used for platform content.",
             "isDeprecated": false,
             "deprecationReason": null
           }
