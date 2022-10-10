@@ -24,7 +24,7 @@ const QUERIES = {
     CompanyTranslations: {
         metadescription: "Returns translations from the user's Thought Industries instance.",
         args: {
-            namespace: "test test test"
+            namespace: "The namespace used to specify the content category for the translations. Accepts values of `lms` for platform content and `emails` for email content."
         }
     },
     CatalogContent: {
