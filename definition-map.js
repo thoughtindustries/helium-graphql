@@ -4,6 +4,19 @@ const TYPES = {
         fields: {
             contentTypes: "Content Types requested in the Catalog."
         }
+    },
+    SuperQuiz: {
+        metadescription: "Contains quiz questions and other data about the entered quiz(s).",
+        fields: {
+            quizzes: "The IDs of the Quizzes user selects and has access to.",
+            questions: "The collection of Quiz questions user selects.",
+            totalTimeInSeconds: "The total estimated time for all of the Quiz questions. This is only applicable when all the Quizzes have the `Estimated Time Per Question` option enabled.",
+            questionSkipEnabled: "Allows learner to skip questions. This is only applicable when all the selected Quizzes have the `Allow Learner to Skip Questions` option enabled.",
+            timerEnabled: "Enables timer. This is only applicable when all the Quizzes have the `Enable Timer` option enabled.",
+            navigationDisabled: "Disables navigation during quiz. This is only applicable when all the Quizzes have the `Disable Navigation During Quiz` option enabled.",
+            displayAllHints: "Display all hints. This is only applicable when all the Quizzes have the `Display all Hints` option enabled.",
+            timePerQuestionInSeconds: "The estimated time per question. This is only applicable when all the Quizzes have the `Estimated Time Per Question` option enabled and use the same value."
+        }
     }
 };
 
@@ -17,6 +30,19 @@ const QUERIES = {
     LanguagesQuery: {
         metadescription: "Returns array of Language objects configured in the Thought Industries instance",
         args: {}
+    },
+    CatalogContent: {
+        metadescription: "Returns catalog content items and meta data matching with the criterias.",
+        args: {
+            sortColumn: "The content data column used to sort the collection. Defaults to the value configured for catalog from the user's Thought Industries instance. If the catalog is not configured, it falls back to value `createdAt`. When the value is `relevance`, it requires the argument `query` also to be set, or it falls back to value `courseStartDate`.",
+            sortDirection: "The direction used to sort the collection. Defaults to the value configured for catalog from the user's Thought Industries instance. If the catalog is not configured, it falls back to value `desc`. When the argument `sortColumn` is `relevance`, it requires the argument `query` also to be set, or it falls back to value `desc`.",
+            resultsDisplayType: "The display type. Defaults to the value configured for catalog from the user's Thought Industries instance. If the catalog is not configured, it falls back to value `grid`. When the value is `calendar`, it overrides the values for argument `sortColumn` to be `displayDate` and `sortDirection` to be `asc`.",
+            token: "The secure catalog query. The value is encoded by the secret key of user's Thought Industries instance.",
+            labels: "The list of aggregation labels. The order of list items will match with argument `values`.",
+            values: "The list of aggregation values. The order of list items will match with argument `labels`.",
+            contentTypes: "The list of content types to be queried.",
+            query: "The search query."
+        }
     },
     LoadAssessmentAttemptWithQuestions: {
         metadescription: "Returns an existing or new assessment attempt with questions. This is used when user starts a new assessment attempt, or resumes from an in-progress assessment attempt.",
@@ -34,7 +60,7 @@ const QUERIES = {
         args: {}
     },
     LoadSuperQuizInfo: {
-        metadescription: "Returns super quiz details from user's configuration.",
+        metadescription: "This query loads quiz questions and other data about the entered quiz(s). This query allows you to fetch questions for multiple quizzes at the same time.",
         args: {
             includeCorrectAnswers: "Flag to include questions the user previously got correct.",
             quizzes: "The IDs of the Quizzes user selects."
@@ -98,12 +124,19 @@ const MUTATIONS = {
             completedAssessmentAttemptId: "The ID of the last completed assessment attempt."
         }
     },
+    Login: {
+        metadescription: "Attempts to login the user. The mutation will perform a number of checks such as password validity and email verification status. If successful, the user will be logged in and an authentication token returned. If not, an appropriate error will be provided.",
+        args: {
+            email: "The email of the Current User attempting to log in.",
+            password: "The password of the Current User attempting to log in.",
+        }
+    }
 }
 
 const DEFINITION_MAP = {
-    ...TYPES,
-    ...QUERIES,
-    ...MUTATIONS
+    TYPES,
+    QUERIES,
+    MUTATIONS
 }
 
 module.exports = DEFINITION_MAP;
