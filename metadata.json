@@ -10,25 +10,6 @@
         },
         "HeliumLaunchData": {
           "documentation": {"undocumented": true}
-        },
-        "LanguagesQuery": {
-          "args": {
-            "id": {
-              "documentation": {"exampleResponses": "builtin-pt, builtin-de, builtin-es"}
-            },
-            "label": {
-              "documentation": {"exampleResponses": "Portuguese, German, Spanish"}
-            },
-            "code": {
-              "documentation": {"exampleResponses": "pt, de, es"}
-            },
-            "isCustom": {
-              "documentation": {"exampleResponses": "false, false, false"}
-            },
-            "selectorLabel": {
-              "documentation": {"exampleResponses": "Português (Brasil), Deutsch, Español"}
-            }
-          }
         }
       }
     }

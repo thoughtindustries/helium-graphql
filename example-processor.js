@@ -1,3 +1,15 @@
+const exampleMap = {
+  Language: {
+    fields: {
+      id: "builtin-pt, builtin-de, builtin-es",
+      label: "Portuguese, German, Spanish",
+      code: "pt, de, es",
+      isCustom: "false, false, false",
+      selectorLabel: "Português (Brasil), Deutsch, Español"
+    }
+  }
+}
+
 module.exports = function processor({
   // The type should always be provided
   type,
@@ -23,6 +35,16 @@ module.exports = function processor({
   // eslint-disable-next-line no-unused-vars
   itemsRequired
 }) {
+  if (exampleMap[type.name]) {
+    const exampleType = exampleMap[type.name];
+    const exampleTypeFields = exampleType.fields || {};
+    for(let fieldName in exampleTypeFields) {
+      if (field && field.name === fieldName) {
+        return exampleTypeFields[fieldName];
+      }
+    }
+  }
+
   if (field) {
     if (
       [
