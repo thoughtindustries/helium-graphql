@@ -30941,7 +30941,7 @@
             "args": [
               {
                 "name": "namespace",
-                "description": "The namespace used to specify the content category for the translations. Accepts values of `lms` for platform content and `emails` for email content.",
+                "description": "The namespace is used to specify the content category for the translations. Accepts values of `lms` for platform content and `emails` for email content.",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -42167,7 +42167,7 @@
       {
         "kind": "ENUM",
         "name": "TranslationNamespace",
-        "description": "The namespace used to specify the content category for the translations.",
+        "description": "The namespace is used to specify the content category for the translations.",
         "fields": null,
         "inputFields": null,
         "interfaces": null,
