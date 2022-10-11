@@ -1,14 +1,4 @@
-const exampleMap = {
-  Language: {
-    fields: {
-      id: "builtin-pt, builtin-de, builtin-es",
-      label: "Portuguese, German, Spanish",
-      code: "pt, de, es",
-      isCustom: "false, false, false",
-      selectorLabel: "Português (Brasil), Deutsch, Español"
-    }
-  }
-}
+const exampleMap = require('./example-map');
 
 module.exports = function processor({
   // The type should always be provided
@@ -35,6 +25,7 @@ module.exports = function processor({
   // eslint-disable-next-line no-unused-vars
   itemsRequired
 }) {
+  // console.log(exampleMap)
   if (exampleMap[type.name]) {
     const exampleType = exampleMap[type.name];
     const exampleTypeFields = exampleType.fields || {};
