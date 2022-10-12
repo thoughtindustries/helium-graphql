@@ -6403,6 +6403,38 @@
                 "ofType": null
               }
             },
+            "isDeprecated": true,
+            "deprecationReason": "Use `selectedSortColumn` and `selectedSortDirection`"
+          },
+          {
+            "name": "selectedSortColumn",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "ENUM",
+                "name": "SortColumn",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "selectedSortDirection",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "ENUM",
+                "name": "SortDirection",
+                "ofType": null
+              }
+            },
             "isDeprecated": false,
             "deprecationReason": null
           },
@@ -30693,18 +30725,6 @@
                 "deprecationReason": null
               },
               {
-                "name": "layoutId",
-                "description": "The ID of the Layout.",
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "ID",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
                 "name": "page",
                 "description": "The page number to return within the collection.",
                 "type": {
@@ -30745,11 +30765,23 @@
                 "deprecationReason": null
               },
               {
-                "name": "sort",
-                "description": null,
+                "name": "sortColumn",
+                "description": "The content data column used to sort the collection. Defaults to the value configured for catalog from the user's Thought Industries instance. If the catalog is not configured, it falls back to value `createdAt`. When the value is `relevance`, it requires the argument `query` also to be set, or it falls back to value `courseStartDate`.",
                 "type": {
-                  "kind": "SCALAR",
-                  "name": "String",
+                  "kind": "ENUM",
+                  "name": "SortColumn",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "sortDirection",
+                "description": "The direction used to sort the collection. Defaults to the value configured for catalog from the user's Thought Industries instance. If the catalog is not configured, it falls back to value `desc`. When the argument `sortColumn` is `relevance`, it requires the argument `query` also to be set, or it falls back to value `desc`.",
+                "type": {
+                  "kind": "ENUM",
+                  "name": "SortDirection",
                   "ofType": null
                 },
                 "defaultValue": null,
@@ -30783,18 +30815,6 @@
                       "ofType": null
                     }
                   }
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "widgetId",
-                "description": "The ID of the Widget.",
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "ID",
-                  "ofType": null
                 },
                 "defaultValue": null,
                 "isDeprecated": false,
@@ -31589,27 +31609,11 @@
           },
           {
             "name": "RusticiLaunchScorm",
-            "description": null,
+            "description": "Returns data to launch SCORM content through Rustici API.",
             "args": [
               {
-                "name": "id",
-                "description": null,
-                "type": {
-                  "kind": "NON_NULL",
-                  "name": null,
-                  "ofType": {
-                    "kind": "SCALAR",
-                    "name": "ID",
-                    "ofType": null
-                  }
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
                 "name": "isPreview",
-                "description": null,
+                "description": "Requests the preview URL to launch SCORM content. This requires the current user to be in admin or manager role.",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -31624,8 +31628,24 @@
                 "deprecationReason": null
               },
               {
+                "name": "topicOrCourseId",
+                "description": "The ID of the Topic Or Course.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "ID",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
                 "name": "type",
-                "description": null,
+                "description": "The type of the Topic Or Course.",
                 "type": {
                   "kind": "ENUM",
                   "name": "ContentOrTopicEnum",
@@ -36387,11 +36407,11 @@
       {
         "kind": "OBJECT",
         "name": "RusticiCourseLaunchResponse",
-        "description": null,
+        "description": "Contains data to launch SCORM content through Rustici API.",
         "fields": [
           {
             "name": "courseTitle",
-            "description": null,
+            "description": "The title of the Topic Or Course.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -36403,7 +36423,7 @@
           },
           {
             "name": "fullscreenEmbed",
-            "description": null,
+            "description": "Launches the SCORM content in fullscreen. This is the default behavior for Course. For Topic, this is applicable when the topic has the `Embed SCORM on page` option enabled.",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -36419,7 +36439,7 @@
           },
           {
             "name": "height",
-            "description": null,
+            "description": "The height of the container to launch the SCORM content. This is only applicable for Topic when the topic has configured the `Height` option. Defaults to `680px` for both pop-ups and embedded SCORM files.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -36431,7 +36451,7 @@
           },
           {
             "name": "isRusticiCourse",
-            "description": null,
+            "description": "Flag to indicate a Course entity in Rustici API.",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -36447,7 +36467,7 @@
           },
           {
             "name": "registrationCheckerEndpoint",
-            "description": null,
+            "description": "The endpoint to check completion status for the current user registration. This requires a `POST` method and request body with JWT. Example curl request: `curl --location --request POST '<registrationCheckerEndpoint>' --header 'Content-Type: application/x-www-form-urlencoded' --data-urlencode 'jwt=<registrationCheckerJWT>'`",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -36463,7 +36483,7 @@
           },
           {
             "name": "registrationCheckerJWT",
-            "description": null,
+            "description": "The JWT to check completion status for the current user registration.",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -36479,7 +36499,7 @@
           },
           {
             "name": "registrationId",
-            "description": null,
+            "description": "The ID of user registration in Rustici API.",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -36495,7 +36515,7 @@
           },
           {
             "name": "url",
-            "description": null,
+            "description": "The URL to launch SCORM content.",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -36511,7 +36531,7 @@
           },
           {
             "name": "width",
-            "description": null,
+            "description": "The width of the container to launch the SCORM content. This is only applicable for Topic when the topic has configured the `Width` option. Defaults to `1000px` for pop-ups, and 100% for embedded SCORM files.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -38685,6 +38705,106 @@
         "inputFields": null,
         "interfaces": [],
         "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "ENUM",
+        "name": "SortColumn",
+        "description": null,
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [
+          {
+            "name": "courseStartDate",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "createdAt",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "displayDate",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "label",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "lastActiveAt",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "name",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "parentName",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "publishDate",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "relevance",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "title",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "updatedAt",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "possibleTypes": null
+      },
+      {
+        "kind": "ENUM",
+        "name": "SortDirection",
+        "description": null,
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [
+          {
+            "name": "asc",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "desc",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
         "possibleTypes": null
       },
       {
