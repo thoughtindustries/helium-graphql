@@ -27,6 +27,10 @@ const QUERIES = {
             namespace: "test test test"
         }
     },
+    LanguagesQuery: {
+        metadescription: "Returns array of Language objects configured in the Thought Industries instance",
+        args: {}
+    },
     CatalogContent: {
         metadescription: "Returns catalog content items and meta data matching with the criterias.",
         args: {
