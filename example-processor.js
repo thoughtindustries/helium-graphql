@@ -25,16 +25,14 @@ module.exports = function processor({
   // eslint-disable-next-line no-unused-vars
   itemsRequired
 }) {
-  // console.log(exampleMap)
   if (exampleMap[type.name]) {
     const exampleType = exampleMap[type.name];
     const exampleTypeFields = exampleType.fields || {};
-    for(let fieldName in exampleTypeFields) {
-      if (field && field.name === fieldName) {
-        return exampleTypeFields[fieldName];
+    const exampleFieldExists = Object.keys(exampleTypeFields).some(key => field && (key === field.name));
+      if (exampleFieldExists) {
+        return exampleTypeFields[field.name]
       }
     }
-  }
 
   if (field) {
     if (
