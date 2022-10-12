@@ -31154,7 +31154,7 @@
           },
           {
             "name": "Languages",
-            "description": null,
+            "description": "Returns array of Language objects configured in the Thought Industries instance",
             "args": [],
             "type": {
               "kind": "NON_NULL",
