@@ -37,6 +37,10 @@ const QUERIES = {
             namespace: "The namespace is used to specify the content category for the translations. Accepts values of `lms` for platform content and `emails` for email content."
         }
     },
+    LanguagesQuery: {
+        metadescription: "Returns array of Language objects configured in the Thought Industries instance",
+        args: {}
+    },
     CatalogContent: {
         metadescription: "Returns catalog content items and meta data matching with the criterias.",
         args: {
