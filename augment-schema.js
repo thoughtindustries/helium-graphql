@@ -1,5 +1,5 @@
 const introspectionFile = require('./graphql.schema.json');
-const { TYPES, QUERIES, MUTATIONS } = require('./definition-map');
+const { TYPES, ENUMS, QUERIES, MUTATIONS } = require('./definition-map');
 const { writeFile } = require('fs/promises');
 const { types } = introspectionFile.__schema;
 
@@ -46,6 +46,25 @@ const handleTypesFields = (type, fields) => {
   }
 };
 
+const handleEnums = (type) => {
+  const { name, enumValues } = type;
+  const definition = ENUMS[name];
+
+  if (definition?.metadescription) {
+    type.description = definition.metadescription;
+  }
+
+  for (const enumValue of enumValues) {
+    let { name: enumName, description } = enumValue;
+
+    if (definition?.enumValues[enumName]) {
+      description = definition.enumValues[enumName];
+    }
+
+    enumValue.description = description;
+  }
+}
+
 const handleQueryOrMutation = (field, isQuery) => {
   const definition = isQuery ? QUERIES[field.name] : MUTATIONS[field.name];
 
@@ -87,6 +106,8 @@ const handleQueryOrMutation = (field, isQuery) => {
         // defined Object Types, e.g., AllocatedLearningPath, UserPurchases, etc.
         handleTypesFields(type, fields);
       }
+    } else if (kind === 'ENUM') {
+      handleEnums(type);
     }
 
     type.fields = fields;
