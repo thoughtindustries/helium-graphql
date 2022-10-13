@@ -36423,7 +36423,7 @@
           },
           {
             "name": "fullscreenEmbed",
-            "description": "Launches the SCORM content in fullscreen. This is the default behavior for Course. For Topic, this is applicable when the topic has the `Embed SCORM on page` option enabled.",
+            "description": "Informs the client whether the SCORM content should be launched in full screen or windowed.",
             "args": [],
             "type": {
               "kind": "NON_NULL",

@@ -9,7 +9,7 @@ const TYPES = {
         metadescription: "Contains data to launch SCORM content through Rustici API.",
         fields: {
             courseTitle: "The title of the Topic Or Course.",
-            fullscreenEmbed: "Launches the SCORM content in fullscreen. This is the default behavior for Course. For Topic, this is applicable when the topic has the `Embed SCORM on page` option enabled.",
+            fullscreenEmbed: "Informs the client whether the SCORM content should be launched in full screen or windowed.",
             height: "The height of the container to launch the SCORM content. This is only applicable for Topic when the topic has configured the `Height` option. Defaults to `680px` for both pop-ups and embedded SCORM files.",
             isRusticiCourse: "Flag to indicate a Course entity in Rustici API.",
             registrationCheckerEndpoint: "The endpoint to check completion status for the current user registration. This requires a `POST` method and request body with JWT. Example curl request: `curl --location --request POST '\<registrationCheckerEndpoint\>' --header 'Content-Type: application/x-www-form-urlencoded' --data-urlencode 'jwt=\<registrationCheckerJWT\>'`",
