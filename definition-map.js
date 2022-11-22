@@ -37,6 +37,10 @@ const QUERIES = {
             namespace: "The namespace is used to specify the content category for the translations. Accepts values of `lms` for platform content and `emails` for email content."
         }
     },
+    CourseById: {
+        metadescription: "Returns various information about the course and the objects that are contained inside of the course, such as the sections, lessons, and pages associated with the course.",
+        args: {}
+    },
     LanguagesQuery: {
         metadescription: "Returns array of Language objects configured in the Thought Industries instance",
         args: {}
@@ -75,6 +79,14 @@ const QUERIES = {
             includeCorrectAnswers: "Flag to include questions the user previously got correct.",
             quizzes: "The IDs of the Quizzes user selects."
         }
+    },
+    UserContentItems: {
+        metadescription: "Returns an array of content that the current user logged in has access to.",
+        args: {}
+    },
+    Pages: {
+        metadescription: "Returns an array of Page objects that are found within courses, such as quiz pages, text pages, video pages, and more.",
+        args: {}
     }
 };
 
