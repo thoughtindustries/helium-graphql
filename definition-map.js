@@ -142,9 +142,9 @@ const MUTATIONS = {
         }
     },
     SelectCurrentUserActiveLicense: {
-        metadescription: "Changes the current users active license.",
+        metadescription: "Changes the active license of the CurrentUser.",
         args: {
-            licenseId: "The licenseId of the license that is to be assigned to the currentUser.",
+            licenseId: "The ID of the License that should be set to 'active' for the CurrentUser.",
         }
     }
 }

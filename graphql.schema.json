@@ -28996,11 +28996,11 @@
           },
           {
             "name": "SelectCurrentUserActiveLicense",
-            "description": "Changes the current users active license.",
+            "description": "Changes the active license of the CurrentUser.",
             "args": [
               {
                 "name": "licenseId",
-                "description": "The licenseId of the license that is to be assigned to the currentUser.",
+                "description": "The ID of the License that should be set to 'active' for the CurrentUser.",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
