@@ -39,7 +39,9 @@ const QUERIES = {
     },
     CourseById: {
         metadescription: "Returns various information about the course and the objects that are contained inside of the course, such as the sections, lessons, and pages associated with the course.",
-        args: {}
+        args: {
+            id: "The ID of the course you are trying to fetch. A CourseGroup ID will not work here."
+        }
     },
     LanguagesQuery: {
         metadescription: "Returns array of Language objects configured in the Thought Industries instance",
@@ -86,7 +88,9 @@ const QUERIES = {
     },
     Pages: {
         metadescription: "Returns an array of Page objects that are found within courses, such as quiz pages, text pages, video pages, and more.",
-        args: {}
+        args: {
+            identifiers: "An arrary of page IDs"
+        }
     }
 };
 
