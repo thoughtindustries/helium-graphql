@@ -140,6 +140,12 @@ const MUTATIONS = {
             email: "The email of the Current User attempting to log in.",
             password: "The password of the Current User attempting to log in.",
         }
+    },
+    SelectCurrentUserActiveLicense: {
+        metadescription: "Changes the active license of the CurrentUser.",
+        args: {
+            licenseId: "The ID of the License that should be set to 'active' for the CurrentUser.",
+        }
     }
 }
 
