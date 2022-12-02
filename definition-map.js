@@ -75,6 +75,13 @@ const QUERIES = {
             includeCorrectAnswers: "Flag to include questions the user previously got correct.",
             quizzes: "The IDs of the Quizzes user selects."
         }
+    },
+    Forums: {
+        metadescription: "This query returns a forum object. A forum is any area you can add a discussion to. For example, assignments, forum page type, discussions below the course on each section.",
+        args: {
+            courseId: "The ID of the course", 
+            clientId: "The ID of the client"
+        }
     }
 };
 
