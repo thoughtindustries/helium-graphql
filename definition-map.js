@@ -79,10 +79,52 @@ const QUERIES = {
     Forums: {
         metadescription: "This query returns a forum object. A forum is any area you can add a discussion to. For example, assignments, forum page type, discussions below the course on each section.",
         args: {
-            courseId: "The ID of the course", 
+            courseId: "The ID of the course. This arguement is required", 
             clientId: "The ID of the client"
         }
-    }
+    },
+    Threads: {
+        metadescription: "This query returns a list of threads.",
+        args: {
+            courseId: "The ID of the course", 
+            clientId: "The ID of the client",
+            forumId: "The ID of the forum. This argument is required",
+            commentableType: "A commentable type can be thread, widgetThread, assignmentSubmission, assignment or a discussionBoard",
+            page: "The number of the page to be returned",
+            perPage: "The amount of items to be returned on the page"
+        }
+    },
+    ThreadById: {
+        metadescription: "This query returns a thread based on the ID provided",
+        args: {
+            id: "the ID of the thread. This argument is required", 
+            clientId: "The ID of the Client", 
+            forumId: "The ID of the Forum", 
+            commentableType: "A commentable type can be thread, widgetThread, assignmentSubmission, assignment or a discussionBoard"
+        }
+    },
+    Comments: {
+        metadescription: "This query returns a list of comments associated with a commentable type",
+        args: {
+            clientId: "The ID of the client",
+            parentId: "The id of the parent",
+            commentableType: "A commentable type can be thread, widgetThread, assignmentSubmission, assignment or a discussionBoard. This argument is required",
+            commentableId: "The ID of the commentable type. This argument is required.",
+            page: "The number of the page to be returned",
+            userId: "The ID of the user"
+        }
+    },
+    SearchThreads: {
+        metadescription: "This query returns a list of threads based on a search query provided",
+        args: {
+            widgetForumId: "The ID of the Widget Forum. This argument is required",
+            clientId: "The ID of the client",
+            query: "The search query used to return the list of threads",
+            page: "The number of the page to be returned. This argument is required",
+            perPage: "The amount of items to be returned on the page",
+            sort: "How the items are to be sorted. This argument is required."
+        }
+    },
 };
 
 const MUTATIONS = {
