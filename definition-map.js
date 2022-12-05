@@ -89,9 +89,7 @@ const QUERIES = {
             courseId: "The ID of the course.", 
             clientId: "The ID of the client.",
             forumId: "The ID of the forum.",
-            commentableType: "The type of thread requested, based on the forum's location, e.g. discussion board, assignment, widget thread etc",
-            page: "The number of the page to be returned.",
-            perPage: "The amount of items to be returned on the page."
+            commentableType: "The type of thread requested, based on the forum's location, e.g. discussion board, assignment, widget thread etc"
         }
     },
     ThreadById: {
@@ -110,7 +108,6 @@ const QUERIES = {
             parentId: "The id of the parent",
             commentableType: "The type of thread requested, based on the forum's location, e.g. discussion board, assignment, widget thread etc.",
             commentableId: "The ID of the commentable type. ",
-            page: "The number of the page to be returned.",
             userId: "The ID of the user."
         }
     },
@@ -120,8 +117,6 @@ const QUERIES = {
             widgetForumId: "The ID of the Widget Forum.",
             clientId: "The ID of the client.",
             query: "The search query used to return the list of threads.",
-            page: "The number of the page to be returned.",
-            perPage: "The amount of items to be returned on the page.",
             sort: "How the items are to be sorted."
         }
     },
