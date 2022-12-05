@@ -85,6 +85,8 @@ const handleQueryOrMutation = (field, isQuery) => {
         description = `The ID of the ${formatName(descSubject)}.`;
       } else if (arg.name === 'page') {
         description = `The page number to return within the collection.`;
+      }  else if (arg.name === 'perPage') {
+        description = `The amount of items to be returned on the page.`;
       }
 
       arg.description = description;
