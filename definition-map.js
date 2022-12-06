@@ -40,7 +40,11 @@ const QUERIES = {
     CourseById: {
         metadescription: "Returns various information about the course and the objects that are contained inside of the course, such as the sections, lessons, and pages associated with the course.",
         args: {
+<<<<<<< Updated upstream
             id: "The ID of the course you are trying to fetch. A CourseGroup ID will not work here."
+=======
+            id: "The ID of the course. Passing the ID of the CourseGroup will not work here. You can get the course ID from the Catalog Content query with the displayCourse field."
+>>>>>>> Stashed changes
         }
     },
     LanguagesQuery: {
@@ -84,12 +88,24 @@ const QUERIES = {
     },
     UserContentItems: {
         metadescription: "Returns an array of content that the current user logged in has access to.",
+<<<<<<< Updated upstream
         args: {}
+=======
+        args: {
+            kind: "The kind of content you want to fetch",
+            query: "A query to filter the items",
+            sort: "An argument to sort"
+        }
+>>>>>>> Stashed changes
     },
     Pages: {
         metadescription: "Returns an array of Page objects that are found within courses, such as quiz pages, text pages, video pages, and more.",
         args: {
+<<<<<<< Updated upstream
             identifiers: "An arrary of page IDs"
+=======
+            identifiers: "The IDs of the Page objects. These are available under the CourseById query."
+>>>>>>> Stashed changes
         }
     }
 };

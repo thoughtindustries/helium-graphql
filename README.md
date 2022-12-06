@@ -1,5 +1,16 @@
 # Helium GraphQL Documentation
 
+## Documentation Standards
+- For queries and mutations
+    - For every query and mutation, there needs to be a clear, easy to understand explanation of what the query or mutation does
+    - For each argument of each query and mutations there needs to be a description of what the argument represents and where it can be found in our existing platform
+    - For argument names regarding Ids, if the arguments represents the id of course, name the argument courseId instead of just course or id 
+
+- In general...
+    - If something is an enum, it should be an enum
+    - The developers reading this documentation are likely unfamiliar with our platform so it is best to over document
+
+
 ## Updating Documentation
 
 Update the `schema` url found in `codegen.yml` to include the API key for the instance you're fetching the schema from.
