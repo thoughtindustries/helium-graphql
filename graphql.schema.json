@@ -33276,7 +33276,7 @@
           },
           {
             "name": "Languages",
-            "description": null,
+            "description": "Returns array of Language objects configured in the Thought Industries instance",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -33731,11 +33731,11 @@
           },
           {
             "name": "RusticiLaunchScorm",
-            "description": null,
+            "description": "Returns data to launch SCORM content through Rustici API.",
             "args": [
               {
                 "name": "isPreview",
-                "description": null,
+                "description": "Requests the preview URL to launch SCORM content. This requires the current user to be in admin or manager role.",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -33767,7 +33767,7 @@
               },
               {
                 "name": "type",
-                "description": null,
+                "description": "The type of the Topic Or Course.",
                 "type": {
                   "kind": "ENUM",
                   "name": "ContentOrTopicEnum",
@@ -38604,11 +38604,11 @@
       {
         "kind": "OBJECT",
         "name": "RusticiCourseLaunchResponse",
-        "description": null,
+        "description": "Contains data to launch SCORM content through Rustici API.",
         "fields": [
           {
             "name": "courseTitle",
-            "description": null,
+            "description": "The title of the Topic Or Course.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -38620,7 +38620,7 @@
           },
           {
             "name": "fullscreenEmbed",
-            "description": null,
+            "description": "Informs the client whether the SCORM content should be launched in full screen or windowed.",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -38636,7 +38636,7 @@
           },
           {
             "name": "height",
-            "description": null,
+            "description": "The height of the container to launch the SCORM content. This is only applicable for Topic when the topic has configured the `Height` option. Defaults to `680px` for both pop-ups and embedded SCORM files.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -38648,7 +38648,7 @@
           },
           {
             "name": "isRusticiCourse",
-            "description": null,
+            "description": "Flag to indicate a Course entity in Rustici API.",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -38664,7 +38664,7 @@
           },
           {
             "name": "registrationCheckerEndpoint",
-            "description": null,
+            "description": "The endpoint to check completion status for the current user registration. This requires a `POST` method and request body with JWT. Example curl request: `curl --location --request POST '<registrationCheckerEndpoint>' --header 'Content-Type: application/x-www-form-urlencoded' --data-urlencode 'jwt=<registrationCheckerJWT>'`",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -38680,7 +38680,7 @@
           },
           {
             "name": "registrationCheckerJWT",
-            "description": null,
+            "description": "The JWT to check completion status for the current user registration.",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -38696,7 +38696,7 @@
           },
           {
             "name": "registrationId",
-            "description": null,
+            "description": "The ID of user registration in Rustici API.",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -38712,7 +38712,7 @@
           },
           {
             "name": "url",
-            "description": null,
+            "description": "The URL to launch SCORM content.",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -38728,7 +38728,7 @@
           },
           {
             "name": "width",
-            "description": null,
+            "description": "The width of the container to launch the SCORM content. This is only applicable for Topic when the topic has configured the `Width` option. Defaults to `1000px` for pop-ups, and 100% for embedded SCORM files.",
             "args": [],
             "type": {
               "kind": "SCALAR",
