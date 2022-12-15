@@ -67,19 +67,17 @@ const handleEnums = (type) => {
 
 const handleQueryOrMutation = (field, isQuery) => {
   const definition = isQuery ? QUERIES[field.name] : MUTATIONS[field.name];
-  console.log("definition: ", field.name);
 
   if (definition?.metadescription) {
     field.description = definition.metadescription;
   }
 
   if (field.args.length) {
-    // console.log("field: ", field);
+
     const { args } = field;
 
     for (const arg of args) {
       let { description } = arg;
-      // console.log("Args: ", args);
       if (definition?.args[arg.name]) {
         description = definition.args[arg.name];
       } else if (arg?.type?.name === 'ID' || arg.name.endsWith('Id')) {

@@ -109,8 +109,8 @@ const QUERIES = {
     ThreadById: {
         metadescription: "This query returns a thread based on the ID provided.",
         args: {
-            id: "the ID of the thread.", 
-            clientId: "The ID of the Client.", 
+            id: "The ID of the thread.", 
+            clientId: "The ID of the client.", 
             forumId: "The ID of the Forum.", 
             commentableType: "The type of thread requested, based on the forum's location, e.g. discussion board, assignment, widget thread etc."
         }
@@ -119,7 +119,7 @@ const QUERIES = {
         metadescription: "This query returns a list of comments associated with a commentable type.",
         args: {
             clientId: "The ID of the client",
-            parentId: "The id of the parent",
+            parentId: "The ID of the parent",
             commentableType: "The type of thread requested, based on the forum's location, e.g. discussion board, assignment, widget thread etc.",
             commentableId: "The ID of the commentable type. ",
             userId: "The ID of the user."
