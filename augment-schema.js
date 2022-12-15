@@ -73,11 +73,11 @@ const handleQueryOrMutation = (field, isQuery) => {
   }
 
   if (field.args.length) {
+
     const { args } = field;
 
     for (const arg of args) {
       let { description } = arg;
-
       if (definition?.args[arg.name]) {
         description = definition.args[arg.name];
       } else if (arg?.type?.name === 'ID' || arg.name.endsWith('Id')) {
@@ -85,6 +85,8 @@ const handleQueryOrMutation = (field, isQuery) => {
         description = `The ID of the ${formatName(descSubject)}.`;
       } else if (arg.name === 'page') {
         description = `The page number to return within the collection.`;
+      }  else if (arg.name === 'perPage') {
+        description = `The amount of items to be returned on the page.`;
       }
 
       arg.description = description;

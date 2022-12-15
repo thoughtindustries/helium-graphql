@@ -90,6 +90,50 @@ const QUERIES = {
             quizzes: "The IDs of the Quizzes user selects."
         }
     },
+    Forums: {
+        metadescription: "This query returns a forum containing discussion threads within a course, discussion widget, or assignment.",
+        args: {
+            courseId: "The ID of the course.", 
+            clientId: "The ID of the client."
+        }
+    },
+    Threads: {
+        metadescription: "This query returns a list of threads.",
+        args: {
+            courseId: "The ID of the course.", 
+            clientId: "The ID of the client.",
+            forumId: "The ID of the forum.",
+            commentableType: "The type of thread requested, based on the forum's location, e.g. discussion board, assignment, widget thread etc"
+        }
+    },
+    ThreadById: {
+        metadescription: "This query returns a thread based on the ID provided.",
+        args: {
+            id: "The ID of the thread.", 
+            clientId: "The ID of the client.", 
+            forumId: "The ID of the Forum.", 
+            commentableType: "The type of thread requested, based on the forum's location, e.g. discussion board, assignment, widget thread etc."
+        }
+    },
+    Comments: {
+        metadescription: "This query returns a list of comments associated with a commentable type.",
+        args: {
+            clientId: "The ID of the client",
+            parentId: "The ID of the parent",
+            commentableType: "The type of thread requested, based on the forum's location, e.g. discussion board, assignment, widget thread etc.",
+            commentableId: "The ID of the commentable type. ",
+            userId: "The ID of the user."
+        }
+    },
+    SearchThreads: {
+        metadescription: "This query returns a list of threads based on a search query provided. It also only works for widet threads.",
+        args: {
+            widgetForumId: "The ID of the Widget Forum.",
+            clientId: "The ID of the client.",
+            query: "The search query used to return the list of threads.",
+            sort: "How the items are to be sorted."
+        }
+    },
     RusticiLaunchScorm: {
         metadescription: "Returns data to launch SCORM content through Rustici API.",
         args: {
