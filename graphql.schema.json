@@ -34793,99 +34793,6 @@
             "deprecationReason": null
           },
           {
-            "name": "Comments",
-            "description": "This query returns a list of comments associated with a commentable type.",
-            "args": [
-              {
-                "name": "clientId",
-                "description": "The ID of the client",
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "ID",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "commentableId",
-                "description": "The ID of the commentable type. ",
-                "type": {
-                  "kind": "NON_NULL",
-                  "name": null,
-                  "ofType": {
-                    "kind": "SCALAR",
-                    "name": "ID",
-                    "ofType": null
-                  }
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "commentableType",
-                "description": "The type of thread requested, based on the forum's location, e.g. discussion board, assignment, widget thread etc.",
-                "type": {
-                  "kind": "NON_NULL",
-                  "name": null,
-                  "ofType": {
-                    "kind": "ENUM",
-                    "name": "CommentableType",
-                    "ofType": null
-                  }
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "page",
-                "description": "The page number to return within the collection.",
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "Int",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "parentId",
-                "description": "The id of the parent",
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "ID",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "userId",
-                "description": "The ID of the user.",
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "ID",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              }
-            ],
-            "type": {
-              "kind": "OBJECT",
-              "name": "CommentsList",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "CompanyDetails",
             "description": null,
             "args": [
@@ -34953,11 +34860,11 @@
           },
           {
             "name": "CourseById",
-            "description": null,
+            "description": "Returns various information about the course and the objects that are contained inside of the course, such as the sections, lessons, and pages associated with the course.",
             "args": [
               {
                 "name": "id",
-                "description": null,
+                "description": "The ID of the course. Passing the ID of the CourseGroup will not work here. You can get the course ID from the Catalog Content query with the displayCourse field.",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -34992,55 +34899,6 @@
               "kind": "OBJECT",
               "name": "User",
               "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "Forums",
-            "description": "This query returns a forum containing discussion threads within a course, discussion widget, or assignment.",
-            "args": [
-              {
-                "name": "clientId",
-                "description": "The ID of the client.",
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "ID",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "courseId",
-                "description": "The ID of the course.",
-                "type": {
-                  "kind": "NON_NULL",
-                  "name": null,
-                  "ofType": {
-                    "kind": "SCALAR",
-                    "name": "ID",
-                    "ofType": null
-                  }
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              }
-            ],
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": {
-                "kind": "NON_NULL",
-                "name": null,
-                "ofType": {
-                  "kind": "OBJECT",
-                  "name": "Forum",
-                  "ofType": null
-                }
-              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -35405,11 +35263,11 @@
           },
           {
             "name": "Pages",
-            "description": null,
+            "description": "Returns an array of Page objects that are found within courses, such as quiz pages, text pages, video pages, and more.",
             "args": [
               {
                 "name": "identifiers",
-                "description": null,
+                "description": "The IDs of the Page objects. These are available under the CourseById query.",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -35673,111 +35531,6 @@
             "deprecationReason": null
           },
           {
-            "name": "SearchThreads",
-            "description": "This query returns a list of threads based on a search query provided. It also only works for widet threads.",
-            "args": [
-              {
-                "name": "clientId",
-                "description": "The ID of the client.",
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "ID",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "page",
-                "description": "The page number to return within the collection.",
-                "type": {
-                  "kind": "NON_NULL",
-                  "name": null,
-                  "ofType": {
-                    "kind": "SCALAR",
-                    "name": "Int",
-                    "ofType": null
-                  }
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "perPage",
-                "description": "The amount of items to be returned on the page.",
-                "type": {
-                  "kind": "NON_NULL",
-                  "name": null,
-                  "ofType": {
-                    "kind": "SCALAR",
-                    "name": "Int",
-                    "ofType": null
-                  }
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "query",
-                "description": "The search query used to return the list of threads.",
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "String",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "sort",
-                "description": "How the items are to be sorted.",
-                "type": {
-                  "kind": "NON_NULL",
-                  "name": null,
-                  "ofType": {
-                    "kind": "SCALAR",
-                    "name": "String",
-                    "ofType": null
-                  }
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "widgetForumId",
-                "description": "The ID of the Widget Forum.",
-                "type": {
-                  "kind": "NON_NULL",
-                  "name": null,
-                  "ofType": {
-                    "kind": "SCALAR",
-                    "name": "ID",
-                    "ofType": null
-                  }
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              }
-            ],
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "OBJECT",
-                "name": "ThreadsList",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "TermsAndConditions",
             "description": null,
             "args": [],
@@ -35789,160 +35542,6 @@
                 "name": "TermsAndConditions",
                 "ofType": null
               }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "ThreadById",
-            "description": "This query returns a thread based on the ID provided.",
-            "args": [
-              {
-                "name": "clientId",
-                "description": "The ID of the Client.",
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "ID",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "commentableType",
-                "description": "The type of thread requested, based on the forum's location, e.g. discussion board, assignment, widget thread etc.",
-                "type": {
-                  "kind": "ENUM",
-                  "name": "CommentableType",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "forumId",
-                "description": "The ID of the Forum.",
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "ID",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "id",
-                "description": "the ID of the thread.",
-                "type": {
-                  "kind": "NON_NULL",
-                  "name": null,
-                  "ofType": {
-                    "kind": "SCALAR",
-                    "name": "ID",
-                    "ofType": null
-                  }
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              }
-            ],
-            "type": {
-              "kind": "OBJECT",
-              "name": "Thread",
-              "ofType": null
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "Threads",
-            "description": "This query returns a list of threads.",
-            "args": [
-              {
-                "name": "clientId",
-                "description": "The ID of the client.",
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "ID",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "commentableType",
-                "description": "The type of thread requested, based on the forum's location, e.g. discussion board, assignment, widget thread etc",
-                "type": {
-                  "kind": "ENUM",
-                  "name": "CommentableType",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "courseId",
-                "description": "The ID of the course.",
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "ID",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "forumId",
-                "description": "The ID of the forum.",
-                "type": {
-                  "kind": "NON_NULL",
-                  "name": null,
-                  "ofType": {
-                    "kind": "SCALAR",
-                    "name": "ID",
-                    "ofType": null
-                  }
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "page",
-                "description": "The page number to return within the collection.",
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "Int",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "perPage",
-                "description": "The amount of items to be returned on the page.",
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "Int",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              }
-            ],
-            "type": {
-              "kind": "OBJECT",
-              "name": "ThreadsList",
-              "ofType": null
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -36132,11 +35731,11 @@
           },
           {
             "name": "UserContentItems",
-            "description": null,
+            "description": "Returns an array of content that the current user logged in has access to.",
             "args": [
               {
                 "name": "kind",
-                "description": null,
+                "description": "The kind of content you want to fetch",
                 "type": {
                   "kind": "LIST",
                   "name": null,
@@ -36156,7 +35755,7 @@
               },
               {
                 "name": "query",
-                "description": null,
+                "description": "A query to filter the items. For example, if you only wanted to fetch videos you could pass in 'contentType:Video'. A full list of possible queries can be found here: https://support.thoughtindustries.com/hc/en-us/articles/360046307253-Writing-a-Search-Query [if you could figure out how to link this that would be great]",
                 "type": {
                   "kind": "SCALAR",
                   "name": "String",
@@ -36168,7 +35767,7 @@
               },
               {
                 "name": "sort",
-                "description": null,
+                "description": "An argument to sort. An example would be 'descending'",
                 "type": {
                   "kind": "SCALAR",
                   "name": "String",
