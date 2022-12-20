@@ -151,7 +151,7 @@ const QUERIES = {
         metadescription: "Returns an array of content that the current user logged in has access to.",
         args: {
             kind: "The kind of content you want to fetch",
-            query: "A query to filter the items. For example, if you only wanted to fetch videos you could pass in 'contentType:Video'. A full list of possible queries can be found here: https://support.thoughtindustries.com/hc/en-us/articles/360046307253-Writing-a-Search-Query [if you could figure out how to link this that would be great]",
+            query: "A query to filter the items. For example, if you only wanted to fetch videos you could pass in 'contentType:Video'. A full list of possible queries can be found here: https://support.thoughtindustries.com/hc/en-us/articles/360046307253-Writing-a-Search-Query",
             sort: "An argument to sort. An example would be 'descending'"
         }
     },
