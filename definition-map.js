@@ -193,6 +193,73 @@ const MUTATIONS = {
             completedAssessmentAttemptId: "The ID of the last completed assessment attempt.",
         }
     },
+    CreateThread: {
+        metadescription: "Creates a thread of comments under a commentable type.",
+        args: {
+            forumId: "The ID of the forum.",
+            courseId: "The ID of the course.",
+            clientId: "The ID of the client.",
+            layoutId: "The ID of the layout.",
+            widgetTitle: "The title of the widget.",
+            commentableType: "The type of thread requested, based on the forum's location, e.g. discussion board, assignment, widget thread etc",
+            asset: "The URL of the asset.",
+            assetFileName: "The file name of the asset.",
+            videoAsset: "The ID of the video asset.",
+            body: "The body of the comment.",
+            title: "The title of the comment.",
+            notificationsEnabled: "Flag to enable notifications."
+        }
+    },
+    UpdateThread: {
+        metadescription: "Adds an additional comment into an exisiting thread",
+        args: {
+            id: "The ID of the thread",
+            body: "The body of the comment",
+            title: "The title of the comment",
+            asset: "The URL of the asset.",
+            commentableType: "The type of thread requested, based on the forum's location, e.g. discussion board, assignment, widget thread etc"
+        }
+    },
+    DestoyThread: {
+        metadescription: "Removed a thread from a commentableType",
+        args: {
+            id: "The ID of the thread",
+            commentableType: "The type of thread requested, based on the forum's location, e.g. discussion board, assignment, widget thread etc"
+        }
+    },
+    UpdateComment: {
+        metadescription: "Updates the body and/or asset of an existing comment",
+        args: {
+            id: "The ID of the id",
+            body: "The updated body of the comment",
+            asset: "The updated asset of the comment",
+            assetFileName: "The file name of the asset.",
+            commentableType: "The type of thread requested, based on the forum's location, e.g. discussion board, assignment, widget thread etc"
+        }
+    },
+    DestroyComment: {
+        metadescription: "Removed a comment from a commentableType",
+        args: {
+            id: "The ID of the comment",
+            commentableType: "The type of thread requested, based on the forum's location, e.g. discussion board, assignment, widget thread etc"
+        }
+    },
+    CreateCommentLike: {
+        metadescription: "Creates a comment on a commentableType",
+        args: {
+            commentId: "The ID of the comment", 
+            commentableId: "The ID of the commentable entity.",            
+            commentableType: "The type of thread requested, based on the forum's location, e.g. discussion board, assignment, widget thread etc",
+             clientId: "The ID of the client"
+        }
+    },
+    RemoveCommentLike: {
+        metadescription: "Removed a comment from a commentableType",
+        args: {
+            commentId: "The ID of the comment", 
+            likeId: "The ID of the like"
+        }
+    },
     MergeAssessmentAttemptIntoComplete: {
         metadescription: "Merges an assessment attempt into the last completed assessment attempt. This is used after user finishes reviewing the unanswered questions, the current assessment attempt will be merged to the last completed assessment attempt.",
         args: {
