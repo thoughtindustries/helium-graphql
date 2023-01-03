@@ -177,7 +177,7 @@ const MUTATIONS = {
         metadescription: "Creates a comment.",
         args: {
             commentableId: "The ID of the commentable entity.",
-            commentableType: "The type of comment to create, based on the comment's location, e.g. discussion board, assignment, widget thread etc.",
+            commentableType: "The type of the comment's parent thread, based on the comment's location, e.g. discussion board, assignment, widget thread etc.",
             body: "The body of the comment.",
             asset: "The URL of the asset.",
             assetFileName: "The file name of the asset.",
@@ -196,7 +196,7 @@ const MUTATIONS = {
         metadescription: "Creates a thread of comments under a commentable type.",
         args: {
             widgetTitle: "The title of the widget.",
-            commentableType: "The type of thread to create, based on the comment's location, e.g. discussion board, assignment, widget thread etc.",
+            commentableType: "The type of thread to create, based on the thread's location, e.g. discussion board, assignment, widget thread etc.",
             asset: "The URL of the asset.",
             assetFileName: "The file name of the asset.",
             videoAsset: "The ID of the video asset.",
@@ -236,7 +236,7 @@ const MUTATIONS = {
         metadescription: "Removed a comment from a thread.",
         args: {
             id: "The ID of the comment.",
-            commentableType: "The type of the comment's parent thread to destory, based on the forum's location, e.g. discussion board, assignment, widget thread etc."
+            commentableType: "The type of the comment's parent thread to destory, based on the thread's location, e.g. discussion board, assignment, widget thread etc."
         }
     },
     CreateCommentLike: {
