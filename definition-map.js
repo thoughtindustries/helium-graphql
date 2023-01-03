@@ -147,7 +147,7 @@ const MUTATIONS = {
         metadescription: "Adds a resource to the queue of content for the current user so it can be viewed at a later time. Returns true if the content has been successfully added. The user must be given access to the course before it can be added to their queue.",
         args: {
             resourceType: "The type of content that is to be added to the queue of the current user.", 
-            resourceId: "The ID for the resource that is to be added to the queue of the current user. For example, this could be a courseID that the user would like to view at a later time."
+            resourceId: "The ID for the resource that is to be added to the queue of the current user. For example, this could be a course ID that the user would like to view at a later time."
         }
     },
     ArchiveUserCourse: {
