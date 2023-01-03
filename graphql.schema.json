@@ -35317,7 +35317,7 @@
               },
               {
                 "name": "instructorAssessmentUser",
-                "description": "The ID of the user on behalf of whom the instructor takes the assessment.",
+                "description": "The ID of the Instructor Assessment User.",
                 "type": {
                   "kind": "SCALAR",
                   "name": "ID",
@@ -35329,7 +35329,7 @@
               },
               {
                 "name": "linkedWorkbook",
-                "description": "The ID of the linked workbook.",
+                "description": "The ID of the Linked Workbook.",
                 "type": {
                   "kind": "SCALAR",
                   "name": "ID",
