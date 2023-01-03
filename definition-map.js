@@ -73,9 +73,8 @@ const QUERIES = {
         args: {
             id: "The ID of the Topic.",
             topicType: "The type of the Topic.",
-            linkedWorkbook: "The ID of the linked workbook.",
             assessmentAttemptId: "The ID of the in-progress assessment attempt to resume from.",
-            instructorAssessmentUser: "The ID of the user on behalf of whom the instructor takes the assessment.",
+            instructorAssessmentUserId: "The ID of the user on behalf of whom the instructor takes the assessment.",
             shouldShuffleAndSubset: "Flag to randomly order questions and choose a subset of questions to use.",
         }
     },

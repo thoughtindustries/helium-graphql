@@ -3206,6 +3206,47 @@
         "possibleTypes": null
       },
       {
+        "kind": "ENUM",
+        "name": "AssessmentTopicType",
+        "description": null,
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": [
+          {
+            "name": "quiz",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "survey",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "tally",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "test",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "workbook",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "possibleTypes": null
+      },
+      {
         "kind": "OBJECT",
         "name": "AssetList",
         "description": null,
@@ -35083,7 +35124,7 @@
                 "deprecationReason": null
               },
               {
-                "name": "instructorAssessmentUser",
+                "name": "instructorAssessmentUserId",
                 "description": "The ID of the user on behalf of whom the instructor takes the assessment.",
                 "type": {
                   "kind": "SCALAR",
@@ -35095,8 +35136,8 @@
                 "deprecationReason": null
               },
               {
-                "name": "linkedWorkbook",
-                "description": "The ID of the linked workbook.",
+                "name": "linkedWorkbookId",
+                "description": "The ID of the Linked Workbook.",
                 "type": {
                   "kind": "SCALAR",
                   "name": "ID",
@@ -35125,8 +35166,8 @@
                   "kind": "NON_NULL",
                   "name": null,
                   "ofType": {
-                    "kind": "SCALAR",
-                    "name": "String",
+                    "kind": "ENUM",
+                    "name": "AssessmentTopicType",
                     "ofType": null
                   }
                 },
