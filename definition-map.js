@@ -144,21 +144,21 @@ const QUERIES = {
     CourseById: {
         metadescription: "Returns various information about the course and the objects that are contained inside of the course, such as the sections, lessons, and pages.",
         args: {
-            id: "The ID of the course. Passing the ID of the CourseGroup will not work here. You can get the course ID from the Catalog Content query with the displayCourse field."
+            id: "The ID of the course."
         }
     },
     UserContentItems: {
         metadescription: "Returns an array of content to which the current logged in user has access.",
         args: {
             kind: "The kind of content you want to fetch.",
-            query: "A query to filter the items. For example, if you only wanted to fetch videos you could pass in 'contentType:Video'. A full list of possible queries can be found here: https://support.thoughtindustries.com/hc/en-us/articles/360046307253-Writing-a-Search-Query",
-            sort: "An argument to sort. An example would be 'descending'"
+            query: "A query to filter the items. For example, if you only wanted to fetch videos you could pass in 'contentType:Video'. A full list of possible queries can be found here: https://support.thoughtindustries.com/hc/en-us/articles/360046307253-Writing-a-Search-Query.",
+            sort: "An argument to sort. An example would be 'descending'."
         }
     },
     Pages: {
         metadescription: "Returns an array of Page objects that are found within courses, such as quiz pages, text pages, video pages, and more.",
         args: {
-            identifiers: "The IDs of the Page objects. These are available under the CourseById query."
+            identifiers: "The IDs of the Page objects requested."
         }
     }
 };
