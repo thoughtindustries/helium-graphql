@@ -209,7 +209,7 @@ const MUTATIONS = {
         metadescription: "Updates the opening comment of the thread.",
         args: {
             id: "The ID of the thread.",
-            body: "The body of the comment.",
+            body: "The body of the opening comment of the thread.",
             title: "The title of the comment.",
             asset: "The URL of the asset.",
             commentableType: "The type of thread to be updated, based on the thread's location, e.g. discussion board, assignment, widget thread etc."
