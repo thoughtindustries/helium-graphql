@@ -177,7 +177,7 @@ const MUTATIONS = {
         metadescription: "Creates a comment.",
         args: {
             commentableId: "The ID of the commentable entity.",
-            commentableType: "The type of the commentable entity.",
+            commentableType: "The type of comment to create, based on the comment's location, e.g. discussion board, assignment, widget thread etc.",
             body: "The body of the comment.",
             asset: "The URL of the asset.",
             assetFileName: "The file name of the asset.",
@@ -195,12 +195,8 @@ const MUTATIONS = {
     CreateThread: {
         metadescription: "Creates a thread of comments under a commentable type.",
         args: {
-            forumId: "The ID of the forum.",
-            courseId: "The ID of the course.",
-            clientId: "The ID of the client.",
-            layoutId: "The ID of the layout.",
             widgetTitle: "The title of the widget.",
-            commentableType: "The type of thread requested, based on the forum's location, e.g. discussion board, assignment, widget thread etc",
+            commentableType: "The type of thread to create, based on the comment's location, e.g. discussion board, assignment, widget thread etc.",
             asset: "The URL of the asset.",
             assetFileName: "The file name of the asset.",
             videoAsset: "The ID of the video asset.",
@@ -210,53 +206,49 @@ const MUTATIONS = {
         }
     },
     UpdateThread: {
-        metadescription: "Adds an additional comment into an exisiting thread",
+        metadescription: "Updates the opening comment of the thread.",
         args: {
-            id: "The ID of the thread",
-            body: "The body of the comment",
-            title: "The title of the comment",
+            id: "The ID of the thread.",
+            body: "The body of the comment.",
+            title: "The title of the comment.",
             asset: "The URL of the asset.",
-            commentableType: "The type of thread requested, based on the forum's location, e.g. discussion board, assignment, widget thread etc"
+            commentableType: "The type of thread to be updated, based on the thread's location, e.g. discussion board, assignment, widget thread etc."
         }
     },
     DestoyThread: {
-        metadescription: "Removed a thread from a commentableType",
+        metadescription: "Removed a thread from a commentableType.",
         args: {
-            id: "The ID of the thread",
-            commentableType: "The type of thread requested, based on the forum's location, e.g. discussion board, assignment, widget thread etc"
+            id: "The ID of the thread.",
+            commentableType: "The type of thread to destroy, based on the thread's location, e.g. discussion board, assignment, widget thread etc."
         }
     },
     UpdateComment: {
-        metadescription: "Updates the body and/or asset of an existing comment",
+        metadescription: "Updates the body and/or asset of an existing comment.",
         args: {
-            id: "The ID of the id",
-            body: "The updated body of the comment",
-            asset: "The updated asset of the comment",
+            id: "The ID of the comment.",
+            body: "The updated body of the comment.",
+            asset: "The updated asset of the comment.",
             assetFileName: "The file name of the asset.",
-            commentableType: "The type of thread requested, based on the forum's location, e.g. discussion board, assignment, widget thread etc"
+            commentableType: "The type of the comment's parent thread to be updated, based on the thread's location, e.g. discussion board, assignment, widget thread etc."
         }
     },
     DestroyComment: {
-        metadescription: "Removed a comment from a commentableType",
+        metadescription: "Removed a comment from a thread.",
         args: {
-            id: "The ID of the comment",
-            commentableType: "The type of thread requested, based on the forum's location, e.g. discussion board, assignment, widget thread etc"
+            id: "The ID of the comment.",
+            commentableType: "The type of the comment's parent thread to destory, based on the forum's location, e.g. discussion board, assignment, widget thread etc."
         }
     },
     CreateCommentLike: {
-        metadescription: "Creates a comment on a commentableType",
+        metadescription: "Adds a like to a comment.",
         args: {
-            commentId: "The ID of the comment", 
             commentableId: "The ID of the commentable entity.",            
-            commentableType: "The type of thread requested, based on the forum's location, e.g. discussion board, assignment, widget thread etc",
-             clientId: "The ID of the client"
+            commentableType: "The type of comment, based on the comment's location, e.g. discussion board, assignment, widget thread etc.",
         }
     },
     RemoveCommentLike: {
-        metadescription: "Removed a comment from a commentableType",
+        metadescription: "Removed a like from a comment.",
         args: {
-            commentId: "The ID of the comment", 
-            likeId: "The ID of the like"
         }
     },
     MergeAssessmentAttemptIntoComplete: {
