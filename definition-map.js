@@ -243,13 +243,11 @@ const MUTATIONS = {
         metadescription: "Adds a like to a comment.",
         args: {
             commentableId: "The ID of the commentable entity.",            
-            commentableType: "The type of comment, based on the comment's location, e.g. discussion board, assignment, widget thread etc.",
+            commentableType: "The type of thread, based on the thread's location, e.g. discussion board, assignment, widget thread etc.",
         }
     },
     RemoveCommentLike: {
         metadescription: "Removed a like from a comment.",
-        args: {
-        }
     },
     MergeAssessmentAttemptIntoComplete: {
         metadescription: "Merges an assessment attempt into the last completed assessment attempt. This is used after user finishes reviewing the unanswered questions, the current assessment attempt will be merged to the last completed assessment attempt.",
