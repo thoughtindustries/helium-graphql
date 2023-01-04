@@ -3206,47 +3206,6 @@
         "possibleTypes": null
       },
       {
-        "kind": "ENUM",
-        "name": "AssessmentTopicType",
-        "description": null,
-        "fields": null,
-        "inputFields": null,
-        "interfaces": null,
-        "enumValues": [
-          {
-            "name": "quiz",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "survey",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "tally",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "test",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "workbook",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "possibleTypes": null
-      },
-      {
         "kind": "OBJECT",
         "name": "AssetList",
         "description": null,
@@ -24815,6 +24774,97 @@
         "possibleTypes": null
       },
       {
+        "kind": "INPUT_OBJECT",
+        "name": "LearnerInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "clientId",
+            "description": null,
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "email",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "firstName",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "lastName",
+            "description": null,
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "licenseIds",
+            "description": null,
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "NON_NULL",
+                "name": null,
+                "ofType": {
+                  "kind": "SCALAR",
+                  "name": "ID",
+                  "ofType": null
+                }
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
         "kind": "OBJECT",
         "name": "LearningPath",
         "description": null,
@@ -30198,11 +30248,11 @@
         "fields": [
           {
             "name": "AddResourceToQueue",
-            "description": null,
+            "description": "Adds a resource to the queue of content for the current user so it can be viewed at a later time. Returns true if the content has been successfully added. The user must be given access to the course before it can be added to their queue.",
             "args": [
               {
                 "name": "resourceId",
-                "description": "The ID of the Resource.",
+                "description": "The ID for the resource that is to be added to the queue of the current user. For example, this could be a courseID that the user would like to view at a later time.",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -30218,7 +30268,7 @@
               },
               {
                 "name": "resourceType",
-                "description": null,
+                "description": "The type of content that is to be added to the queue of the current user.",
                 "type": {
                   "kind": "ENUM",
                   "name": "ContentKind",
@@ -30588,7 +30638,7 @@
               },
               {
                 "name": "commentableType",
-                "description": "The type of the commentable entity.",
+                "description": "The type of the comment's parent thread, based on the comment's location, e.g. discussion board, assignment, widget thread etc.",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -30650,6 +30700,148 @@
                 "kind": "OBJECT",
                 "name": "Comment",
                 "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "CreateLearner",
+            "description": null,
+            "args": [
+              {
+                "name": "clientId",
+                "description": "The ID of the Client.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "ID",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "email",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "firstName",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "lastName",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "licenseIds",
+                "description": null,
+                "type": {
+                  "kind": "LIST",
+                  "name": null,
+                  "ofType": {
+                    "kind": "NON_NULL",
+                    "name": null,
+                    "ofType": {
+                      "kind": "SCALAR",
+                      "name": "ID",
+                      "ofType": null
+                    }
+                  }
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "User",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "CreateLearners",
+            "description": null,
+            "args": [
+              {
+                "name": "learners",
+                "description": null,
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "LIST",
+                    "name": null,
+                    "ofType": {
+                      "kind": "NON_NULL",
+                      "name": null,
+                      "ofType": {
+                        "kind": "INPUT_OBJECT",
+                        "name": "LearnerInput",
+                        "ofType": null
+                      }
+                    }
+                  }
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "User",
+                  "ofType": null
+                }
               }
             },
             "isDeprecated": false,
@@ -34901,11 +35093,11 @@
           },
           {
             "name": "CourseById",
-            "description": "Returns various information about the course and the objects that are contained inside of the course, such as the sections, lessons, and pages associated with the course.",
+            "description": null,
             "args": [
               {
                 "name": "id",
-                "description": "The ID of the course. Passing the ID of the CourseGroup will not work here. You can get the course ID from the Catalog Content query with the displayCourse field.",
+                "description": null,
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -35124,8 +35316,8 @@
                 "deprecationReason": null
               },
               {
-                "name": "instructorAssessmentUserId",
-                "description": "The ID of the user on behalf of whom the instructor takes the assessment.",
+                "name": "instructorAssessmentUser",
+                "description": "The ID of the Instructor Assessment User.",
                 "type": {
                   "kind": "SCALAR",
                   "name": "ID",
@@ -35136,7 +35328,7 @@
                 "deprecationReason": null
               },
               {
-                "name": "linkedWorkbookId",
+                "name": "linkedWorkbook",
                 "description": "The ID of the Linked Workbook.",
                 "type": {
                   "kind": "SCALAR",
@@ -35166,8 +35358,8 @@
                   "kind": "NON_NULL",
                   "name": null,
                   "ofType": {
-                    "kind": "ENUM",
-                    "name": "AssessmentTopicType",
+                    "kind": "SCALAR",
+                    "name": "String",
                     "ofType": null
                   }
                 },
@@ -35304,11 +35496,11 @@
           },
           {
             "name": "Pages",
-            "description": "Returns an array of Page objects that are found within courses, such as quiz pages, text pages, video pages, and more.",
+            "description": null,
             "args": [
               {
                 "name": "identifiers",
-                "description": "The IDs of the Page objects. These are available under the CourseById query.",
+                "description": null,
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -35772,11 +35964,11 @@
           },
           {
             "name": "UserContentItems",
-            "description": "Returns an array of content that the current user logged in has access to.",
+            "description": null,
             "args": [
               {
                 "name": "kind",
-                "description": "The kind of content you want to fetch",
+                "description": null,
                 "type": {
                   "kind": "LIST",
                   "name": null,
@@ -35796,7 +35988,7 @@
               },
               {
                 "name": "query",
-                "description": "A query to filter the items. For example, if you only wanted to fetch videos you could pass in 'contentType:Video'. A full list of possible queries can be found here: https://support.thoughtindustries.com/hc/en-us/articles/360046307253-Writing-a-Search-Query",
+                "description": null,
                 "type": {
                   "kind": "SCALAR",
                   "name": "String",
@@ -35808,7 +36000,7 @@
               },
               {
                 "name": "sort",
-                "description": "An argument to sort. An example would be 'descending'",
+                "description": null,
                 "type": {
                   "kind": "SCALAR",
                   "name": "String",

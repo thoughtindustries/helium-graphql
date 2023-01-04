@@ -139,30 +139,17 @@ const QUERIES = {
             isPreview: "Requests the preview URL to launch SCORM content. This requires the current user to be in admin or manager role.",
             type: "The type of the Topic Or Course."
         }
-    },
-    CourseById: {
-        metadescription: "Returns various information about the course and the objects that are contained inside of the course, such as the sections, lessons, and pages.",
-        args: {
-            id: "The ID of the course."
-        }
-    },
-    UserContentItems: {
-        metadescription: "Returns an array of content to which the current logged in user has access.",
-        args: {
-            kind: "The kind of content you want to fetch.",
-            query: "A query to filter the items. For example, if you only wanted to fetch videos you could pass in 'contentType:Video'. A full list of possible queries can be found here: https://support.thoughtindustries.com/hc/en-us/articles/360046307253-Writing-a-Search-Query.",
-            sort: "An argument to sort. An example would be 'descending'."
-        }
-    },
-    Pages: {
-        metadescription: "Returns an array of Page objects that are found within courses, such as quiz pages, text pages, video pages, and more.",
-        args: {
-            identifiers: "The IDs of the Page objects requested."
-        }
     }
 };
 
 const MUTATIONS = {
+    AddResourceToQueue: {
+        metadescription: "Adds a resource to the queue of content for the current user so it can be viewed at a later time. Returns true if the content has been successfully added. The user must be given access to the course before it can be added to their queue.",
+        args: {
+            resourceType: "The type of content that is to be added to the queue of the current user.", 
+            resourceId: "The ID for the resource that is to be added to the queue of the current user. For example, this could be a course ID that the user would like to view at a later time."
+        }
+    },
     ArchiveUserCourse: {
         metadescription: "Archives a user's access to a course.",
         args: {
@@ -197,7 +184,7 @@ const MUTATIONS = {
         metadescription: "Creates a comment.",
         args: {
             commentableId: "The ID of the commentable entity.",
-            commentableType: "The type of the commentable entity.",
+            commentableType: "The type of the comment's parent thread, based on the comment's location, e.g. discussion board, assignment, widget thread etc.",
             body: "The body of the comment.",
             asset: "The URL of the asset.",
             assetFileName: "The file name of the asset.",
@@ -211,6 +198,63 @@ const MUTATIONS = {
         args: {
             completedAssessmentAttemptId: "The ID of the last completed assessment attempt.",
         }
+    },
+    CreateThread: {
+        metadescription: "Creates a thread of comments under a commentable type.",
+        args: {
+            widgetTitle: "The title of the widget.",
+            commentableType: "The type of thread to create, based on the thread's location, e.g. discussion board, assignment, widget thread etc.",
+            asset: "The URL of the asset.",
+            assetFileName: "The file name of the asset.",
+            videoAsset: "The ID of the video asset.",
+            body: "The body of the comment.",
+            title: "The title of the comment.",
+            notificationsEnabled: "Flag to enable notifications."
+        }
+    },
+    UpdateThread: {
+        metadescription: "Updates the opening comment of the thread.",
+        args: {
+            id: "The ID of the thread.",
+            body: "The body of the opening comment of the thread.",
+            title: "The title of the comment.",
+            asset: "The URL of the asset.",
+            commentableType: "The type of thread to be updated, based on the thread's location, e.g. discussion board, assignment, widget thread etc."
+        }
+    },
+    DestoyThread: {
+        metadescription: "Removed a thread from a commentableType.",
+        args: {
+            id: "The ID of the thread.",
+            commentableType: "The type of thread to destroy, based on the thread's location, e.g. discussion board, assignment, widget thread etc."
+        }
+    },
+    UpdateComment: {
+        metadescription: "Updates the body and/or asset of an existing comment.",
+        args: {
+            id: "The ID of the comment.",
+            body: "The updated body of the comment.",
+            asset: "The updated asset of the comment.",
+            assetFileName: "The file name of the asset.",
+            commentableType: "The type of the comment's parent thread to be updated, based on the thread's location, e.g. discussion board, assignment, widget thread etc."
+        }
+    },
+    DestroyComment: {
+        metadescription: "Removed a comment from a thread.",
+        args: {
+            id: "The ID of the comment.",
+            commentableType: "The type of the comment's parent thread to destory, based on the thread's location, e.g. discussion board, assignment, widget thread etc."
+        }
+    },
+    CreateCommentLike: {
+        metadescription: "Adds a like to a comment.",
+        args: {
+            commentableId: "The ID of the commentable entity.",            
+            commentableType: "The type of thread, based on the thread's location, e.g. discussion board, assignment, widget thread etc.",
+        }
+    },
+    RemoveCommentLike: {
+        metadescription: "Removed a like from a comment.",
     },
     MergeAssessmentAttemptIntoComplete: {
         metadescription: "Merges an assessment attempt into the last completed assessment attempt. This is used after user finishes reviewing the unanswered questions, the current assessment attempt will be merged to the last completed assessment attempt.",
