@@ -30248,11 +30248,11 @@
         "fields": [
           {
             "name": "AddResourceToQueue",
-            "description": null,
+            "description": "Adds a resource to the queue of content for the current user so it can be viewed at a later time. Returns true if the content has been successfully added. The user must be given access to the course before it can be added to their queue.",
             "args": [
               {
                 "name": "resourceId",
-                "description": "The ID of the Resource.",
+                "description": "The ID for the resource that is to be added to the queue of the current user. For example, this could be a courseID that the user would like to view at a later time.",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -30268,7 +30268,7 @@
               },
               {
                 "name": "resourceType",
-                "description": null,
+                "description": "The type of content that is to be added to the queue of the current user.",
                 "type": {
                   "kind": "ENUM",
                   "name": "ContentKind",
