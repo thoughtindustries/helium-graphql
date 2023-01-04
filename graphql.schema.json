@@ -30638,7 +30638,7 @@
               },
               {
                 "name": "commentableType",
-                "description": "The type of the commentable entity.",
+                "description": "The type of the comment's parent thread, based on the comment's location, e.g. discussion board, assignment, widget thread etc.",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,

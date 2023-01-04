@@ -184,7 +184,7 @@ const MUTATIONS = {
         metadescription: "Creates a comment.",
         args: {
             commentableId: "The ID of the commentable entity.",
-            commentableType: "The type of the commentable entity.",
+            commentableType: "The type of the comment's parent thread, based on the comment's location, e.g. discussion board, assignment, widget thread etc.",
             body: "The body of the comment.",
             asset: "The URL of the asset.",
             assetFileName: "The file name of the asset.",
@@ -198,6 +198,63 @@ const MUTATIONS = {
         args: {
             completedAssessmentAttemptId: "The ID of the last completed assessment attempt.",
         }
+    },
+    CreateThread: {
+        metadescription: "Creates a thread of comments under a commentable type.",
+        args: {
+            widgetTitle: "The title of the widget.",
+            commentableType: "The type of thread to create, based on the thread's location, e.g. discussion board, assignment, widget thread etc.",
+            asset: "The URL of the asset.",
+            assetFileName: "The file name of the asset.",
+            videoAsset: "The ID of the video asset.",
+            body: "The body of the comment.",
+            title: "The title of the comment.",
+            notificationsEnabled: "Flag to enable notifications."
+        }
+    },
+    UpdateThread: {
+        metadescription: "Updates the opening comment of the thread.",
+        args: {
+            id: "The ID of the thread.",
+            body: "The body of the opening comment of the thread.",
+            title: "The title of the comment.",
+            asset: "The URL of the asset.",
+            commentableType: "The type of thread to be updated, based on the thread's location, e.g. discussion board, assignment, widget thread etc."
+        }
+    },
+    DestoyThread: {
+        metadescription: "Removed a thread from a commentableType.",
+        args: {
+            id: "The ID of the thread.",
+            commentableType: "The type of thread to destroy, based on the thread's location, e.g. discussion board, assignment, widget thread etc."
+        }
+    },
+    UpdateComment: {
+        metadescription: "Updates the body and/or asset of an existing comment.",
+        args: {
+            id: "The ID of the comment.",
+            body: "The updated body of the comment.",
+            asset: "The updated asset of the comment.",
+            assetFileName: "The file name of the asset.",
+            commentableType: "The type of the comment's parent thread to be updated, based on the thread's location, e.g. discussion board, assignment, widget thread etc."
+        }
+    },
+    DestroyComment: {
+        metadescription: "Removed a comment from a thread.",
+        args: {
+            id: "The ID of the comment.",
+            commentableType: "The type of the comment's parent thread to destory, based on the thread's location, e.g. discussion board, assignment, widget thread etc."
+        }
+    },
+    CreateCommentLike: {
+        metadescription: "Adds a like to a comment.",
+        args: {
+            commentableId: "The ID of the commentable entity.",            
+            commentableType: "The type of thread, based on the thread's location, e.g. discussion board, assignment, widget thread etc.",
+        }
+    },
+    RemoveCommentLike: {
+        metadescription: "Removed a like from a comment.",
     },
     MergeAssessmentAttemptIntoComplete: {
         metadescription: "Merges an assessment attempt into the last completed assessment attempt. This is used after user finishes reviewing the unanswered questions, the current assessment attempt will be merged to the last completed assessment attempt.",
