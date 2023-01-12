@@ -78,7 +78,7 @@ const handleQueryOrMutation = (field, isQuery) => {
 
     for (const arg of args) {
       let { description } = arg;
-      if (definition?.args[arg.name]) {
+      if (argHasDefinition(definition, arg)) {
         description = definition.args[arg.name];
       } else if (arg?.type?.name === 'ID' || arg.name.endsWith('Id')) {
         const descSubject = arg.name.endsWith('Id') ? arg.name.slice(0, -2) : arg.name;
@@ -95,6 +95,14 @@ const handleQueryOrMutation = (field, isQuery) => {
     field.args = args;
   }
 };
+
+const argHasDefinition = (definition, arg) => {
+  if (!arg.name || !definition) {
+    return false;
+  }
+
+  return definition && definition.args && definition.args[arg.name]
+}
 
 (async function() {
   for (const type of types) {
