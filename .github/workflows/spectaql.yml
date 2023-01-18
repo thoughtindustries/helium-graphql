@@ -4,6 +4,8 @@ on:
   pull_request_target:
     types:
       - closed
+    branches:
+      - 'main'
 
 jobs:
   build-and-deploy:
@@ -20,6 +22,12 @@ jobs:
           npm ci
           npm run augment-schema
           npm run generate-docs
+
+      - name: Commit Docs
+        uses: EndBug/add-and-commit@v9
+        id: commit_branch
+        with:
+          message: 'Updating Documentation HTML and Schema'
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.6.2
