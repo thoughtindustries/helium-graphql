@@ -38277,109 +38277,12 @@
             "deprecationReason": null
           },
           {
-            "name": "CatalogQuery",
+            "name": "Comments",
             "description": null,
             "args": [
               {
-                "name": "page",
-                "description": "The page number to return within the collection.",
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "Int",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "query",
-                "description": null,
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "String",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "queryExclusions",
-                "description": null,
-                "type": {
-                  "kind": "LIST",
-                  "name": null,
-                  "ofType": {
-                    "kind": "NON_NULL",
-                    "name": null,
-                    "ofType": {
-                      "kind": "SCALAR",
-                      "name": "String",
-                      "ofType": null
-                    }
-                  }
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "queryLimit",
-                "description": null,
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "Int",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "querySignature",
-                "description": null,
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "String",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              },
-              {
-                "name": "querySort",
-                "description": null,
-                "type": {
-                  "kind": "SCALAR",
-                  "name": "String",
-                  "ofType": null
-                },
-                "defaultValue": null,
-                "isDeprecated": false,
-                "deprecationReason": null
-              }
-            ],
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": {
-                "kind": "OBJECT",
-                "name": "CatalogContent",
-                "ofType": null
-              }
-            },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "Comments",
-            "description": "This query returns a list of comments associated with a commentable type. The results of this query can be affected by providing an authToken header to set a user for the operation.",
-            "args": [
-              {
                 "name": "clientId",
-                "description": "The ID of the client",
+                "description": null,
                 "type": {
                   "kind": "SCALAR",
                   "name": "ID",
@@ -38391,7 +38294,7 @@
               },
               {
                 "name": "commentableId",
-                "description": "The ID of the commentable type. ",
+                "description": null,
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -38407,7 +38310,7 @@
               },
               {
                 "name": "commentableType",
-                "description": "The type of thread requested, based on the forum's location, e.g. discussion board, assignment, widget thread etc.",
+                "description": null,
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -38423,7 +38326,7 @@
               },
               {
                 "name": "page",
-                "description": "The page number to return within the collection.",
+                "description": null,
                 "type": {
                   "kind": "SCALAR",
                   "name": "Int",
@@ -38435,7 +38338,7 @@
               },
               {
                 "name": "parentId",
-                "description": "The ID of the parent",
+                "description": null,
                 "type": {
                   "kind": "SCALAR",
                   "name": "ID",
@@ -38447,7 +38350,7 @@
               },
               {
                 "name": "userId",
-                "description": "The ID of the user.",
+                "description": null,
                 "type": {
                   "kind": "SCALAR",
                   "name": "ID",
