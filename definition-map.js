@@ -359,6 +359,12 @@ const QUERIES = {
       identifiers: '',
     },
   },
+  CourseGroupBySlug: {
+    metadescription: 'This query returns the Course Group associated with the slug given.',
+    args: {
+      slug: 'The slug for the Course Group being retrieved.',
+    },
+  },
 };
 
 const MUTATIONS = {
@@ -433,7 +439,7 @@ const MUTATIONS = {
     args: {
       widgetTitle: 'The title of the widget.',
       commentableType:
-        "The type of thread to create, based on the thread's location, e.g. discussion board, assignment, widget thread etc. The results of this mutation can be affected by providing an authToken header to set a user for the operation.",
+        "The type of thread to create, based on the thread's location, e.g. discussion board, assignment, widget thread etc.",
       asset: 'The URL of the asset.',
       assetFileName: 'The file name of the asset.',
       videoAsset: 'The ID of the video asset.',
