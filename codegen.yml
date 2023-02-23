@@ -1,5 +1,5 @@
 overwrite: true
-schema: "https://home.thoughtindustries.com/helium"
+schema: 'https://home.thoughtindustries.com/helium'
 config:
   avoidOptionals: false
   maybeValue: T
@@ -18,4 +18,4 @@ config:
 generates:
   ./graphql.schema.json:
     plugins:
-      - "introspection"
+      - 'introspection'

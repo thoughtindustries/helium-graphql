@@ -1,9 +1,10 @@
 spectaql:
-  themeDir: "./custom-theme"
+  themeDir: './custom-theme'
 
 info:
   title: Helium GraphQL API Reference
-  description: Documentation related to available types, queries, mutations, etc. in Helium
+  description: Documentation related to available types, queries, mutations, etc. in Helium.
+  linkToAPIDocs: We also have a REST API with additional endpoints not covered in our GraphQL API. Documentation for the REST API can be found here https://api.thoughtindustries.com/#thought-industries-api.
   termsOfService: https://www.thoughtindustries.com
   contact:
     name: Get Support
