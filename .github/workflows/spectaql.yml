@@ -16,6 +16,7 @@ jobs:
         uses: actions/checkout@v2.3.1
         with:
           fetch-depth: 0
+          token: ${{ secrets.REPO_PAT }}
 
       - name: Install and Build Spectaql
         run: |
@@ -23,11 +24,29 @@ jobs:
           npm run augment-schema
           npm run generate-docs
 
-      - name: Commit Docs
+      - name: Commit Docs to Temp Branch
         uses: EndBug/add-and-commit@v9
-        id: commit_branch
+        id: commit
         with:
           message: 'Updating Documentation HTML and Schema'
+          committer_name: Ti Bot
+          committer_email: sre@thoughtindustries.com
+          push: 'origin ${{ github.ref_name }}-${{ github.sha }} --set-upstream --force'
+          new_branch: '${{ github.ref_name }}-${{ github.sha }}'
+
+      - name: Update branch to latest ref
+        run: |
+          curl -o - -w "\n%{http_code}\n" \
+          -H "Content-Type: application/json" -H "Authorization: token ${{ secrets.REPO_PAT }}" \
+          -X PATCH https://api.github.com/repos/thoughtindustries/helium-graphql/git/refs/heads/main -d '{ "sha": "${{ steps.commit.outputs.commit_long_sha }}", "force": false }' \
+          | awk '{l[NR] = $0} END {for (i=1; i<=NR; i++) print l[i]}; END{ if ($0<200||$0>299) exit 22 }'
+        # this is a workaround for the version of cURL on the GitHub actions image not supporting --fail-with-body. It exits with code 22 if the HTTP req fails, but retains the body
+
+      - name: Cleanup temporary branch
+        if: always()
+        run: |
+          if [[ $(git ls-remote --heads origin ${{ github.ref_name }}-${{ github.sha }} | wc -l) -gt  0 ]]; then git push origin --delete ${{ github.ref_name }}-${{ github.sha }}; else echo "Branch not found on remote, not deleting"; fi;
+        # This will run whether the above step is successful or not, so it first checks to make sure the remote branch exists before attempting delete. This prevents a fail state if the branch does not exist but will fail if the delete fails.
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.6.2
