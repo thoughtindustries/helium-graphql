@@ -28,6 +28,11 @@ jobs:
           npm run augment-schema
           npm run generate-docs
 
+      - name: Print Info
+        run: |
+          echo ${{ github.ref }}
+          echo ${{ github.ref_name }}
+
       - name: Commit Docs to Temp Branch
         if: ${{ github.ref == 'refs/heads/gh-actions-test' }}
         uses: EndBug/add-and-commit@v9
