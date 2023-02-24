@@ -3,9 +3,9 @@ name: Publish Spectaql
 on:
   push:
     branches: 
-  pull_request_target:
     - 'CLM-7422-actions-fix'
 # testing
+#  pull_request_target:
 #    types:
 #      - closed
 #    branches:
