@@ -34,7 +34,7 @@ jobs:
           echo ${{ github.ref_name }}
 
       - name: Commit Docs to Temp Branch
-        if: ${{ github.ref == 'refs/heads/gh-actions-test' }}
+        # if: ${{ github.ref == 'refs/heads/gh-actions-test' }}
         uses: EndBug/add-and-commit@v9
         id: commit
         with:
@@ -45,11 +45,11 @@ jobs:
           new_branch: '${{ github.ref_name }}-${{ github.sha }}'
 
       - name: Update branch to latest ref
-        if: ${{ github.ref == 'refs/heads/gh-actions-test' }}
+        # if: ${{ github.ref == 'refs/heads/gh-actions-test' }}
         run: |
           curl -o - -w "\n%{http_code}\n" \
           -H "Content-Type: application/json" -H "Authorization: token ${{ secrets.REPO_PAT }}" \
-          -X PATCH https://api.github.com/repos/thoughtindustries/ti/git/${{ github.ref }} -d '{ "sha": "${{ steps.commit.outputs.commit_long_sha }}", "force": false }' \
+          -X PATCH https://api.github.com/repos/thoughtindustries/helium-graphql/git/gh-actions-test -d '{ "sha": "${{ steps.commit.outputs.commit_long_sha }}", "force": false }' \
           | awk '{l[NR] = $0} END {for (i=1; i<=NR; i++) print l[i]}; END{ if ($0<200||$0>299) exit 22 }'
         # this is a workaround for the version of cURL on the GitHub actions image not supporting --fail-with-body. It exits with code 22 if the HTTP req fails, but retains the body
 
