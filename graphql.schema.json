@@ -33393,7 +33393,7 @@
               },
               {
                 "name": "commentableType",
-                "description": "The type of thread to create, based on the thread's location, e.g. discussion board, assignment, widget thread etc. The results of this mutation can be affected by providing an authToken header to set a user for the operation.",
+                "description": "The type of thread to create, based on the thread's location, e.g. discussion board, assignment, widget thread etc.",
                 "type": {
                   "kind": "ENUM",
                   "name": "CommentableType",
@@ -38278,11 +38278,11 @@
           },
           {
             "name": "Comments",
-            "description": null,
+            "description": "This query returns a list of comments associated with a commentable type. The results of this query can be affected by providing an authToken header to set a user for the operation.",
             "args": [
               {
                 "name": "clientId",
-                "description": null,
+                "description": "The ID of the client",
                 "type": {
                   "kind": "SCALAR",
                   "name": "ID",
@@ -38294,7 +38294,7 @@
               },
               {
                 "name": "commentableId",
-                "description": null,
+                "description": "The ID of the commentable type. ",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -38310,7 +38310,7 @@
               },
               {
                 "name": "commentableType",
-                "description": null,
+                "description": "The type of thread requested, based on the forum's location, e.g. discussion board, assignment, widget thread etc.",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -38326,7 +38326,7 @@
               },
               {
                 "name": "page",
-                "description": null,
+                "description": "The page number to return within the collection.",
                 "type": {
                   "kind": "SCALAR",
                   "name": "Int",
@@ -38338,7 +38338,7 @@
               },
               {
                 "name": "parentId",
-                "description": null,
+                "description": "The ID of the parent",
                 "type": {
                   "kind": "SCALAR",
                   "name": "ID",
@@ -38350,7 +38350,7 @@
               },
               {
                 "name": "userId",
-                "description": null,
+                "description": "The ID of the user.",
                 "type": {
                   "kind": "SCALAR",
                   "name": "ID",
@@ -38470,11 +38470,11 @@
           },
           {
             "name": "CourseGroupBySlug",
-            "description": null,
+            "description": "This query returns the Course Group associated with the slug given.",
             "args": [
               {
                 "name": "slug",
-                "description": null,
+                "description": "The slug for the Course Group being retrieved.",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -38499,7 +38499,7 @@
           },
           {
             "name": "CurrentUser",
-            "description": null,
+            "description": "The results of this query can be affected by providing an authToken header to set a user for the operation.",
             "args": [
               {
                 "name": "slug",
@@ -38861,11 +38861,11 @@
           },
           {
             "name": "LearningPathBySlug",
-            "description": null,
+            "description": "Returns the learning path associated with the slug.",
             "args": [
               {
                 "name": "slug",
-                "description": null,
+                "description": "The slug for the Learning Path",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -38890,7 +38890,7 @@
           },
           {
             "name": "LearningPathCurrentUserAwardTotals",
-            "description": null,
+            "description": "The results of this query can be affected by providing an authToken header to set a user for the operation.",
             "args": [
               {
                 "name": "slug",
@@ -39175,7 +39175,7 @@
           },
           {
             "name": "Pages",
-            "description": null,
+            "description": "The results of this query can be affected by providing an authToken header to set a user for the operation.",
             "args": [
               {
                 "name": "id",
@@ -57264,7 +57264,10 @@
         "name": "authAccess",
         "description": null,
         "isRepeatable": false,
-        "locations": ["FIELD_DEFINITION", "OBJECT"],
+        "locations": [
+          "FIELD_DEFINITION",
+          "OBJECT"
+        ],
         "args": [
           {
             "name": "requires",
@@ -57284,7 +57287,9 @@
         "name": "complexity",
         "description": null,
         "isRepeatable": false,
-        "locations": ["FIELD_DEFINITION"],
+        "locations": [
+          "FIELD_DEFINITION"
+        ],
         "args": [
           {
             "name": "multipliers",
@@ -57353,7 +57358,11 @@
         "name": "include",
         "description": "Directs the executor to include this field or fragment only when the `if` argument is true.",
         "isRepeatable": false,
-        "locations": ["FIELD", "FRAGMENT_SPREAD", "INLINE_FRAGMENT"],
+        "locations": [
+          "FIELD",
+          "FRAGMENT_SPREAD",
+          "INLINE_FRAGMENT"
+        ],
         "args": [
           {
             "name": "if",
@@ -57377,7 +57386,11 @@
         "name": "skip",
         "description": "Directs the executor to skip this field or fragment when the `if` argument is true.",
         "isRepeatable": false,
-        "locations": ["FIELD", "FRAGMENT_SPREAD", "INLINE_FRAGMENT"],
+        "locations": [
+          "FIELD",
+          "FRAGMENT_SPREAD",
+          "INLINE_FRAGMENT"
+        ],
         "args": [
           {
             "name": "if",
@@ -57401,7 +57414,9 @@
         "name": "specifiedBy",
         "description": "Exposes a URL that specifies the behavior of this scalar.",
         "isRepeatable": false,
-        "locations": ["SCALAR"],
+        "locations": [
+          "SCALAR"
+        ],
         "args": [
           {
             "name": "url",
