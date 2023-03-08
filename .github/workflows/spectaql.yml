@@ -1,6 +1,9 @@
 name: Publish Spectaql
 
 on:
+  push:
+    branches:
+      - 'main'
   pull_request_target:
     types:
       - closed
@@ -38,7 +41,7 @@ jobs:
         run: |
           curl -o - -w "\n%{http_code}\n" \
           -H "Content-Type: application/json" -H "Authorization: token ${{ secrets.REPO_PAT }}" \
-          -X PATCH https://api.github.com/repos/thoughtindustries/helium-graphql/git/refs/heads/spectaql-pages -d '{ "sha": "${{ steps.commit.outputs.commit_long_sha }}", "force": false }' \
+          -X PATCH https://api.github.com/repos/thoughtindustries/helium-graphql/git/refs/heads/main -d '{ "sha": "${{ steps.commit.outputs.commit_long_sha }}", "force": false }' \
           | awk '{l[NR] = $0} END {for (i=1; i<=NR; i++) print l[i]}; END{ if ($0<200||$0>299) exit 22 }'
         # this is a workaround for the version of cURL on the GitHub actions image not supporting --fail-with-body. It exits with code 22 if the HTTP req fails, but retains the body
 
@@ -54,7 +57,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.REPO_PAT }}
           GIT_CONFIG_NAME: Ti Bot
           GIT_CONFIG_EMAIL: sre@thoughtindustries.com
-          BRANCH: spectaql-pages # The branch the action should deploy to.
+          BRANCH: main # The branch the action should deploy to.
           FOLDER: public # The folder that the build-storybook script generates files.
           CLEAN: true # Automatically remove deleted files from the deploy branch
           TARGET_FOLDER: docs # The folder that we serve our Storybook files from
