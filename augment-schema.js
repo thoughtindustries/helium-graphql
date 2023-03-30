@@ -107,7 +107,7 @@ const argHasDefinition = (definition, arg) => {
 };
 
 (async function () {
-  const hideList = ['CatalogQuery'];
+  const hideList = ['CatalogQuery', 'HeliumDeploymentLog'];
   for (const type of types) {
     const { kind, name, fields } = type;
 
