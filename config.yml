@@ -6,6 +6,7 @@ info:
   description: Documentation related to available types, queries, mutations, etc. in Helium.
   linkToAPIDocs: We also have a REST API with additional endpoints not covered in our GraphQL API. Documentation for the REST API can be found here https://api.thoughtindustries.com/#thought-industries-api.
   termsOfService: https://www.thoughtindustries.com
+  rateLimits: The GraphQL API has a rate limit per hour. Find out more here https://developer.thoughtindustries.com/build/developer-guide#graphql-rate-limits
   contact:
     name: Get Support
     url: https://discord.gg/cTJBX4muVn
