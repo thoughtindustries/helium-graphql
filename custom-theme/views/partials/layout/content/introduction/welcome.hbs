@@ -2,7 +2,32 @@
   <div class='doc-copy'>
     {{md info.description}}
     {{md info.linkToAPIDocs}}
-    {{md info.rateLimits}}
+    {{md info.rateLimits.title}}
+    <div>
+      <h1>GraphQL Rate Limits</h1>
+      {{! limitations }}
+      <p>{{info.rateLimits.limitations.title}}</p>
+      <ul>
+        <li>{{info.rateLimits.limitations.limit1}}</li>
+        <li>{{info.rateLimits.limitations.limit2}}</li>
+        <li>{{info.rateLimits.limitations.limit3}}</li>
+      </ul>
+      <p>{{info.rateLimits.contactMessage}}</p>
+      <br />
+      {{! calculating query complexity }}
+      <h3>{{info.rateLimits.complexity.title}}</h3>
+      <p>{{info.rateLimits.complexity.block1.heading}}</p>
+      <pre style='color: black;'><code>{{info.rateLimits.complexity.block1.snippet}}</code></pre>
+      <p>{{info.rateLimits.complexity.block2.heading}}</p>
+      <pre style='color: black;'><code>{{info.rateLimits.complexity.block2.snippet}}</code></pre>
+      <h3>{{info.rateLimits.additionalInformation.title}}</h3>
+      <p>{{info.rateLimits.additionalInformation.information.title}}</p>
+      <ul>
+        <li>{{info.rateLimits.additionalInformation.information.header1}}</li>
+        <li>{{info.rateLimits.additionalInformation.information.header2}}</li>
+        <li>{{info.rateLimits.additionalInformation.information.header3}}</li>
+      </ul>
+    </div>
   </div>
   <div class='doc-examples'>
     {{#if info.contact}}
