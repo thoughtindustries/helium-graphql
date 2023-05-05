@@ -6,6 +6,45 @@ info:
   description: Documentation related to available types, queries, mutations, etc. in Helium.
   linkToAPIDocs: We also have a REST API with additional endpoints not covered in our GraphQL API. Documentation for the REST API can be found here https://api.thoughtindustries.com/#thought-industries-api.
   termsOfService: https://www.thoughtindustries.com
+  rateLimits:
+    title: GraphQL Rate Limits
+    limitations:
+      title: In order for a request to be processed, there are 3 limitations that must be met
+      limit1: A single query must not exceed a calculated complexity of 1000 points.
+      limit2: Each instance is allotted 100,000 points per minute. This is not on a rolling basis; the points allowance resets 60 seconds from the first request.
+      limit3: The instance can not exceed 1000 requests per minute, regardless of complexity or points allowance.
+    contactMessage: Helium is meant to scale with your learning instance. If you have any concerns on limitations, please reach out to us.
+    complexity:
+      title: Calculating Query Complexity
+      block1:
+        heading: Each requested property costs 1 point by default.
+        snippet: |
+          query { 
+            CurrentUser { 
+              firstName 
+              lastName 
+            } 
+          }
+          // 1 (firstName) + 1 (lastName) = a 2 point query
+      block2:
+        heading: Certain queries types, such as `CourseViews` or `Courses` may have an additional cost as they require more resource-intensive queries.
+        snippet: |
+          query { 
+            CatalogContent { 
+              id 
+              title 
+              slug 
+            } 
+          }
+          // 1(id) + 1(title) + 1(slug) + 3(performance cost) = a 6 point query
+    additionalInformation:
+      title: Additional Rate Limiting Information
+      information:
+        title: Information related to points can be found in the following headers
+        header1: X-RateLimit-Remaining Number of allotted points remaining in the current duration
+        header2: X-RateLimit-Reset Timestamp at which point the allotted points will reset
+        header3: Retry-After Received only after exceeding a limit, denotes the number of seconds to wait before attempting the request again
+
   contact:
     name: Get Support
     url: https://discord.gg/cTJBX4muVn
