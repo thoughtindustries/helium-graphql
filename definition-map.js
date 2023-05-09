@@ -140,6 +140,11 @@ const QUERIES = {
         'Flag to randomly order questions and choose a subset of questions to use.',
     },
   },
+  LoadAssessmentAttempts: {
+    metadescription: 
+      'The Load Assessment Attempts endpoint returns all Assessment Attempts within the school. This query requires an authToken header to set a manager user for the operation.',
+      args: {},
+  },
   LoadAssessmentAttemptsByTopicOrCourse: {
     metadescription:
       'Returns assessment attempts by course and/or topic. The results of this query can be affected by providing an authToken header to set a user for the operation.',
