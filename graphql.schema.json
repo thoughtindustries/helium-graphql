@@ -39690,7 +39690,7 @@
           },
           {
             "name": "LoadAssessmentAttempts",
-            "description": "The Load Assessment Attempts endpoint returns all Assessment Attempts within the school. This query requires an authToken header to set a manager user for the operation.",
+            "description": "The Load Assessment Attempts query returns all Assessment Attempts within the school. This query requires an authToken header to set a manager user for the operation.",
             "args": [
               {
                 "name": "courseId",
