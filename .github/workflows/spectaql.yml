@@ -32,6 +32,8 @@ jobs:
         id: commit
         with:
           message: 'Updating Documentation HTML and Schema'
+          author_name: Ti Bot
+          author_email: sre@thoughtindustries.com
           committer_name: Ti Bot
           committer_email: sre@thoughtindustries.com
           push: 'origin ${{ github.ref_name }}-${{ github.sha }} --set-upstream --force'
