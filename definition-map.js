@@ -142,8 +142,11 @@ const QUERIES = {
   },
   LoadAssessmentAttempts: {
     metadescription: 
-      'The Load Assessment Attempts endpoint returns all Assessment Attempts within the school. This query requires an authToken header to set a manager user for the operation.',
-      args: {},
+      'The Load Assessment Attempts query returns all Assessment Attempts within the school. This query requires an authToken header to set a manager user for the operation.',
+      args: {
+        startDate: 'Filters the returned results to the specified start date.',
+        endDate: 'Filters the returned results to the specified end date.',
+      },
   },
   LoadAssessmentAttemptsByTopicOrCourse: {
     metadescription:

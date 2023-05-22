@@ -39690,7 +39690,7 @@
           },
           {
             "name": "LoadAssessmentAttempts",
-            "description": "The Load Assessment Attempts endpoint returns all Assessment Attempts within the school. This query requires an authToken header to set a manager user for the operation.",
+            "description": "The Load Assessment Attempts query returns all Assessment Attempts within the school. This query requires an authToken header to set a manager user for the operation.",
             "args": [
               {
                 "name": "courseId",
@@ -39706,7 +39706,7 @@
               },
               {
                 "name": "endDate",
-                "description": null,
+                "description": "Filters the returned results to the specified end date.",
                 "type": {
                   "kind": "SCALAR",
                   "name": "Date",
@@ -39742,7 +39742,7 @@
               },
               {
                 "name": "startDate",
-                "description": null,
+                "description": "Filters the returned results to the specified start date.",
                 "type": {
                   "kind": "SCALAR",
                   "name": "Date",
