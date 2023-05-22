@@ -1,5 +1,6 @@
 spectaql:
   themeDir: './custom-theme'
+  targetDir: 'docs'
 
 info:
   title: Helium GraphQL API Reference
