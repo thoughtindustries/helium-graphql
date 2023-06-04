@@ -507,6 +507,16 @@ const MUTATIONS = {
         "The type of thread, based on the thread's location, e.g. discussion board, assignment, widget thread etc.",
     },
   },
+  CurrentUserResetCourseProgress: {
+    metadescription:
+      "Resets progress for a specific learner and a specific course.",
+    args: {
+      revokeAccess:
+        "When set to true, learner access to the content item is also revoked",
+      slug: "The slug identifier of the course you want to reset progress for.",
+      userId: "The user ID you want to reset progress for.",
+    },
+  },
   RemoveCommentLike: {
     metadescription:
       'Removed a like from a comment. The results of this mutation can be affected by providing an authToken header to set a user for the operation.',
