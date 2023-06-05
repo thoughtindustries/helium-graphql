@@ -39112,11 +39112,11 @@
           },
           {
             "name": "Comments",
-            "description": null,
+            "description": "This query returns a list of comments associated with a commentable type. The results of this query can be affected by providing an authToken header to set a user for the operation.",
             "args": [
               {
                 "name": "clientId",
-                "description": null,
+                "description": "The ID of the client",
                 "type": {
                   "kind": "SCALAR",
                   "name": "ID",
@@ -39128,7 +39128,7 @@
               },
               {
                 "name": "commentableId",
-                "description": null,
+                "description": "The ID of the commentable type. ",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -39144,7 +39144,7 @@
               },
               {
                 "name": "commentableType",
-                "description": null,
+                "description": "The type of thread requested, based on the forum's location, e.g. discussion board, assignment, widget thread etc.",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -39160,7 +39160,7 @@
               },
               {
                 "name": "page",
-                "description": null,
+                "description": "The page number to return within the collection.",
                 "type": {
                   "kind": "SCALAR",
                   "name": "Int",
@@ -39172,7 +39172,7 @@
               },
               {
                 "name": "parentId",
-                "description": null,
+                "description": "The ID of the parent",
                 "type": {
                   "kind": "SCALAR",
                   "name": "ID",
@@ -39184,7 +39184,7 @@
               },
               {
                 "name": "userId",
-                "description": null,
+                "description": "The ID of the user.",
                 "type": {
                   "kind": "SCALAR",
                   "name": "ID",
@@ -39504,7 +39504,7 @@
               },
               {
                 "name": "jobId",
-                "description": null,
+                "description": "The ID of the Job.",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
