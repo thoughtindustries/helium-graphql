@@ -82,21 +82,6 @@ const TYPES = {
       questions: 'This field has an additional cost of 3 points.',
     },
   },
-  TestimonialInput: {
-    metadescription: 'Contains data to submit a testimonial.',
-    fields: {
-      body: 'The body of the testimonial.',
-      rating: 'The rating of the testimonial. This is a number value between `0` and `100`.',
-    },
-  },
-  Testimonial: {
-    metadescription: 'Contains data for a testimonial.',
-    fields: {
-      body: 'The body of the testimonial.',
-      rating: 'The rating of the testimonial.',
-      user: 'The user who submits the testimonial.',
-    },
-  },
 };
 
 const ENUMS = {
@@ -623,13 +608,6 @@ const MUTATIONS = {
   ValidateRegistrationCode: {
     metadescription:
       'The results of this mutation can be affected by providing an authToken header to set a user for the operation.',
-  },
-  SubmitTestimonial: {
-    metadescription: 'Submits a testimonial to a course group. After a learner completes a course, the learner is invited to create a public-facing testimonial where they share their experience with others. The results of this mutation can be affected by providing an authToken header to set a user for the operation.',
-    args: {
-      courseGroupId: 'The ID of the course group',
-      testimonial: 'The testimonial input.',
-    },
   },
 };
 

@@ -12,20 +12,9 @@ const formatName = (name) =>
   });
 const withoutId = (name) => name.replace(/\s[Ii]d$/, '');
 
-const handleObjects = (type) => {
-  const { name, fields } = type;
-  const definition = TYPES[name];
-  handleTypesFields(type, fields, definition);
-};
-
-const handleInputObjects = (type) => {
-  const { name, inputFields } = type;
-  const definition = TYPES[name];
-  handleTypesFields(type, inputFields, definition);
-};
-
-const handleTypesFields = (type, fields, definition) => {
+const handleTypesFields = (type, fields) => {
   const { name } = type;
+  const definition = TYPES[name];
   const formattedName = formatName(name);
 
   if (definition?.metadescription) {
@@ -134,13 +123,13 @@ const argHasDefinition = (definition, arg) => {
         });
       } else if (name !== 'Query' && name !== 'Mutation') {
         // defined Object Types, e.g., AllocatedLearningPath, UserPurchases, etc.
-        handleObjects(type);
+        handleTypesFields(type, fields);
       }
     } else if (kind === 'ENUM') {
       handleEnums(type);
-    } else if (kind === 'INPUT_OBJECT') {
-      handleInputObjects(type);
     }
+
+    type.fields = fields;
   }
 
   introspectionFile.__schema.types = types;
