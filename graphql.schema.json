@@ -3422,6 +3422,18 @@
         "description": null,
         "fields": [
           {
+            "name": "description",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "id",
             "description": "The ID of the Assignment.",
             "args": [],
@@ -9512,6 +9524,12 @@
             "deprecationReason": null
           },
           {
+            "name": "shareToLinkedIn",
+            "description": "Link to Add Certificate to LinkedIn",
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "textLabel",
             "description": "Short Text",
             "isDeprecated": false,
@@ -14505,6 +14523,18 @@
             "type": {
               "kind": "SCALAR",
               "name": "Date",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "freeWithRegistration",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
               "ofType": null
             },
             "isDeprecated": false,
@@ -34779,6 +34809,55 @@
             "deprecationReason": null
           },
           {
+            "name": "SubmitTestimonial",
+            "description": "Submits a testimonial to a course group. After a learner completes a course, the learner is invited to create a public-facing testimonial where they share their experience with others. The results of this mutation can be affected by providing an authToken header to set a user for the operation.",
+            "args": [
+              {
+                "name": "courseGroupId",
+                "description": "The ID of the Course Group.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "UUID",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "testimonial",
+                "description": "The testimonial input.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "TestimonialInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Testimonial",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "UnenrollFromWaitlist",
             "description": "The results of this mutation can be affected by providing an authToken header to set a user for the operation.",
             "args": [
@@ -51350,11 +51429,11 @@
       {
         "kind": "OBJECT",
         "name": "Testimonial",
-        "description": null,
+        "description": "Contains data for a testimonial.",
         "fields": [
           {
             "name": "body",
-            "description": null,
+            "description": "The body of the testimonial.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -51390,7 +51469,7 @@
           },
           {
             "name": "rating",
-            "description": null,
+            "description": "The rating of the testimonial.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -51402,7 +51481,7 @@
           },
           {
             "name": "user",
-            "description": null,
+            "description": "The user who submits the testimonial.",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -51415,6 +51494,41 @@
         ],
         "inputFields": null,
         "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "TestimonialInput",
+        "description": "Contains data to submit a testimonial.",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "body",
+            "description": "The body of the testimonial.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "rating",
+            "description": "The rating of the testimonial. This is a number value between `0` and `100`.",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "interfaces": null,
         "enumValues": null,
         "possibleTypes": null
       },
@@ -53236,6 +53350,16 @@
         "kind": "SCALAR",
         "name": "URL",
         "description": "A valid absolute URL string starting with either a valid protocol or a leading www",
+        "fields": null,
+        "inputFields": null,
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "SCALAR",
+        "name": "UUID",
+        "description": "A field whose value is a UUID.",
         "fields": null,
         "inputFields": null,
         "interfaces": null,
