@@ -5735,11 +5735,11 @@
       {
         "kind": "OBJECT",
         "name": "Bookmark",
-        "description": null,
+        "description": "Contains data for a bookmark.",
         "fields": [
           {
             "name": "bookmarkFolder",
-            "description": null,
+            "description": "The bookmark folder associated with the bookmark.",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -5819,7 +5819,7 @@
           },
           {
             "name": "note",
-            "description": null,
+            "description": "The note of the bookmark.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -5831,7 +5831,7 @@
           },
           {
             "name": "topic",
-            "description": null,
+            "description": "The topic associated with the bookmark.",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -5855,7 +5855,7 @@
           },
           {
             "name": "user",
-            "description": null,
+            "description": "The user who owns the bookmark.",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -5878,11 +5878,11 @@
       {
         "kind": "OBJECT",
         "name": "BookmarkFolder",
-        "description": null,
+        "description": "Contains data for a bookmark folder.",
         "fields": [
           {
             "name": "bookmarkCount",
-            "description": null,
+            "description": "The count of bookmarks associated with the bookmark folder.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -5894,7 +5894,7 @@
           },
           {
             "name": "bookmarks",
-            "description": null,
+            "description": "The list of bookmarks associated with the bookmark folder.",
             "args": [],
             "type": {
               "kind": "LIST",
@@ -5914,7 +5914,7 @@
           },
           {
             "name": "defaultFolder",
-            "description": null,
+            "description": "Returns true when it is the default bookmark folder.",
             "args": [],
             "type": {
               "kind": "SCALAR",
@@ -5970,7 +5970,7 @@
           },
           {
             "name": "name",
-            "description": null,
+            "description": "The name of the bookmark folder.",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -5986,7 +5986,7 @@
           },
           {
             "name": "user",
-            "description": null,
+            "description": "The user who owns the bookmark folder.",
             "args": [],
             "type": {
               "kind": "NON_NULL",
@@ -18908,8 +18908,8 @@
                 "ofType": null
               }
             },
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "No longer supported."
           },
           {
             "name": "tabType",
@@ -18936,12 +18936,71 @@
                 "ofType": null
               }
             },
-            "isDeprecated": false,
-            "deprecationReason": null
+            "isDeprecated": true,
+            "deprecationReason": "Use query `CourseGroupTestimonials`"
           }
         ],
         "inputFields": null,
         "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "CreateBookmarkInput",
+        "description": "The input fields and values to use when creating a bookmark.",
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "bookmarkFolderId",
+            "description": "The id of the bookmark folder.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "UUID",
+                "ofType": null
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "note",
+            "description": "The note of the bookmark.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "topicId",
+            "description": "The id of the topic.",
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "UUID",
+                "ofType": null
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "interfaces": null,
         "enumValues": null,
         "possibleTypes": null
       },
@@ -33492,6 +33551,84 @@
             "deprecationReason": null
           },
           {
+            "name": "CreateBookmark",
+            "description": "Creates a bookmark. The results of this mutation can be affected by providing an authToken header to set a user for the operation.",
+            "args": [
+              {
+                "name": "bookmark",
+                "description": "The input fields to create a bookmark.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "CreateBookmarkInput",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Bookmark",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "CreateBookmarkFolder",
+            "description": "Creates a bookmark folder. The results of this mutation can be affected by providing an authToken header to set a user for the operation.",
+            "args": [
+              {
+                "name": "defaultFolder",
+                "description": "Flag to set it as the default bookmark folder.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Boolean",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "name",
+                "description": "The name of the bookmark folder.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "String",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "BookmarkFolder",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "CreateCertificateFromUpload",
             "description": "The results of this mutation can be affected by providing an authToken header to set a user for the operation.",
             "args": [
@@ -35275,6 +35412,83 @@
               {
                 "name": "topicId",
                 "description": "The ID of the Topic.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "ID",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "UpdateUserCourseMeetingAttendance",
+            "description": "marks a specific learner as “attended” for a specific meeting in a specific course.",
+            "args": [
+              {
+                "name": "attended",
+                "description": "Setting this to true will mark the user as attended on the meeting roster; setting to false will mark the user as not attended.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "Boolean",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "courseId",
+                "description": "The course ID of the meeting you want to mark as attended.",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "ID",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "meetingId",
+                "description": "The meeting ID of the meeting you want to mark as attended.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "ID",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "userId",
+                "description": "The ID of the user you want to mark as attended.",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -39327,6 +39541,47 @@
               "kind": "OBJECT",
               "name": "CourseGroup",
               "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "CourseGroupTestimonials",
+            "description": "This query returns a list of testimonials associated with a course group.",
+            "args": [
+              {
+                "name": "id",
+                "description": "The ID of the course group.",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "UUID",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              }
+            ],
+            "type": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "OBJECT",
+                    "name": "Testimonial",
+                    "ofType": null
+                  }
+                }
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
