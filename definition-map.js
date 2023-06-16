@@ -489,6 +489,17 @@ const MUTATIONS = {
         "The type of the comment's parent thread to be updated, based on the thread's location, e.g. discussion board, assignment, widget thread etc.",
     },
   },
+  UpdateUserCourseMeetingAttendance: {
+    metadescription:
+      "marks a specific learner as “attended” for a specific meeting in a specific course.",
+    args: {
+      attended:
+        "Setting this to true will mark the user as attended on the meeting roster; setting to false will mark the user as not attended.",
+      courseId: "The course ID of the meeting you want to mark as attended.",
+      meetingId: "The meeting ID of the meeting you want to mark as attended.",
+      userId: "The ID of the user you want to mark as attended.",
+    },
+  },
   DestroyComment: {
     metadescription:
       'Removed a comment from a thread. The results of this mutation can be affected by providing an authToken header to set a user for the operation.',
