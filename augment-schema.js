@@ -6,8 +6,11 @@ const { types } = introspectionFile.__schema;
 const commonIdFields = ['bundle', 'course', 'learningPath', 'license', 'client'];
 const recordTimestampFields = ['createdAt', 'updatedAt'];
 
-const formatName = name => name.replace(/([A-Z])/g, ' $1').replace(/^./, function(str){ return str.toUpperCase().trim(); })
-const withoutId = name => name.replace(/\s[Ii]d$/, '');
+const formatName = (name) =>
+  name.replace(/([A-Z])/g, ' $1').replace(/^./, function (str) {
+    return str.toUpperCase().trim();
+  });
+const withoutId = (name) => name.replace(/\s[Ii]d$/, '');
 
 const handleTypesFields = (type, fields) => {
   const { name } = type;
@@ -16,7 +19,7 @@ const handleTypesFields = (type, fields) => {
 
   if (definition?.metadescription) {
     type.description = definition.metadescription;
-  } 
+  }
 
   for (const field of fields) {
     const formattedFieldName = formatName(field.name);
@@ -63,7 +66,7 @@ const handleEnums = (type) => {
 
     enumValue.description = description;
   }
-}
+};
 
 const handleQueryOrMutation = (field, isQuery) => {
   const definition = isQuery ? QUERIES[field.name] : MUTATIONS[field.name];
@@ -73,19 +76,18 @@ const handleQueryOrMutation = (field, isQuery) => {
   }
 
   if (field.args.length) {
-
     const { args } = field;
 
     for (const arg of args) {
       let { description } = arg;
-      if (definition?.args[arg.name]) {
+      if (argHasDefinition(definition, arg)) {
         description = definition.args[arg.name];
       } else if (arg?.type?.name === 'ID' || arg.name.endsWith('Id')) {
         const descSubject = arg.name.endsWith('Id') ? arg.name.slice(0, -2) : arg.name;
         description = `The ID of the ${formatName(descSubject)}.`;
       } else if (arg.name === 'page') {
         description = `The page number to return within the collection.`;
-      }  else if (arg.name === 'perPage') {
+      } else if (arg.name === 'perPage') {
         description = `The amount of items to be returned on the page.`;
       }
 
@@ -96,14 +98,29 @@ const handleQueryOrMutation = (field, isQuery) => {
   }
 };
 
-(async function() {
+const argHasDefinition = (definition, arg) => {
+  if (!arg.name || !definition) {
+    return false;
+  }
+
+  return definition && definition.args && definition.args[arg.name];
+};
+
+(async function () {
+  const hideList = ['CatalogQuery', 'HeliumDeploymentLog'];
   for (const type of types) {
     const { kind, name, fields } = type;
 
     if (kind === 'OBJECT') {
       if (name === 'Query' || name === 'Mutation') {
         const isQuery = name === 'Query';
-        fields.forEach(field => handleQueryOrMutation(field, isQuery));
+        fields.forEach(function (field) {
+          if (hideList.includes(field.name)) {
+            fields.splice(fields.indexOf(field), 1);
+          } else {
+            handleQueryOrMutation(field, isQuery);
+          }
+        });
       } else if (name !== 'Query' && name !== 'Mutation') {
         // defined Object Types, e.g., AllocatedLearningPath, UserPurchases, etc.
         handleTypesFields(type, fields);
@@ -120,4 +137,4 @@ const handleQueryOrMutation = (field, isQuery) => {
   await writeFile('./graphql.schema.json', JSON.stringify(introspectionFile, null, 2));
 })()
   .then(() => process.exit(0))
-  .catch(err => console.error('err', err));
+  .catch((err) => console.error('err', err));
