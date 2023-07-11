@@ -102,6 +102,10 @@ const QUERIES = {
         'The namespace is used to specify the content category for the translations. Accepts values of `lms` for platform content and `emails` for email content.',
     },
   },
+  UserArchivedContent: {
+    metadescription: 'Returns a content type with information about current users archived content',
+    args: {},
+  },
   Languages: {
     metadescription:
       'Returns array of Language objects configured in the Thought Industries instance',
@@ -141,12 +145,12 @@ const QUERIES = {
     },
   },
   LoadAssessmentAttempts: {
-    metadescription: 
+    metadescription:
       'The Load Assessment Attempts query returns all Assessment Attempts within the school. This query requires an authToken header to set a manager user for the operation.',
-      args: {
-        startDate: 'Filters the returned results to the specified start date.',
-        endDate: 'Filters the returned results to the specified end date.',
-      },
+    args: {
+      startDate: 'Filters the returned results to the specified start date.',
+      endDate: 'Filters the returned results to the specified end date.',
+    },
   },
   LoadAssessmentAttemptsByTopicOrCourse: {
     metadescription:
@@ -491,13 +495,13 @@ const MUTATIONS = {
   },
   UpdateUserCourseMeetingAttendance: {
     metadescription:
-      "marks a specific learner as “attended” for a specific meeting in a specific course.",
+      'marks a specific learner as “attended” for a specific meeting in a specific course.',
     args: {
       attended:
-        "Setting this to true will mark the user as attended on the meeting roster; setting to false will mark the user as not attended.",
-      courseId: "The course ID of the meeting you want to mark as attended.",
-      meetingId: "The meeting ID of the meeting you want to mark as attended.",
-      userId: "The ID of the user you want to mark as attended.",
+        'Setting this to true will mark the user as attended on the meeting roster; setting to false will mark the user as not attended.',
+      courseId: 'The course ID of the meeting you want to mark as attended.',
+      meetingId: 'The meeting ID of the meeting you want to mark as attended.',
+      userId: 'The ID of the user you want to mark as attended.',
     },
   },
   DestroyComment: {
